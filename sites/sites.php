@@ -59,4 +59,5 @@ $sites = array(
       '35.229.57.162' => 'root',
       '35.229.57.162.events' => 'events',
       '35.229.57.162.workflow' => 'workflow',
+      '35.229.57.162.postdocs' => 'postdocs',      
     );
