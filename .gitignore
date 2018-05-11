@@ -27,6 +27,7 @@ tmp*
 sites/*/files/
 sites/*/settings.php
 sites/*/settings.local.php
+sites/sites.php
 vendor
 
 # Exclude IDE's project directory
