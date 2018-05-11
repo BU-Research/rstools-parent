@@ -1,0 +1,438 @@
+/* Homepage */
+
+.home {
+	.on-this-page {
+		display: none;
+	}
+	.content-container {
+		padding: 0;
+		background: $color-grayScale-f;
+		border: none;
+		max-width: none;
+	}
+	.main-banner {
+		display: none;
+	}
+	
+	.bannerContainer-pageWidth {
+		position: relative;
+		max-height: 500px;
+		overflow: hidden;
+		margin: 0;
+	}
+	.breadcrumbs {
+		margin: 0;
+	}
+	.option-buttons {
+		display: none;
+	}
+	.breadcrumbs {
+		color: $color-grayScale-f;
+		text-align: center;
+	}
+	article[role=main] {
+		padding-right: 0;
+
+		//.recommended,
+		.end-content,
+		.content-wrap {
+			max-width: $container-LG;
+			margin: 0 auto;
+		}
+	}
+	.content-wrap {
+		max-width: $container-LG;
+		margin: 0 auto;
+	}
+	.intro-text {
+		width: 100%;
+	}
+	article[role=main] > h1 {
+		display: none; /* temporarily hide h1 */
+
+	}
+	.intro {
+		display: none; /* temporarily hide intro */
+	}
+	.inline-search {
+		@extend %clearfix;
+		margin: 40px auto 20px auto;
+		background: transparent;
+		display: block;
+
+		@include breakpoint(xs) {
+			width: 90%;
+		}
+	}
+	.list-widget h3 {
+		float: left;
+		margin: 0;
+		font-size: 28px;
+	}
+	.sidebar {
+		//display: none;
+	}
+}
+
+/* Homepage intro banner */
+
+.intro-banner {
+	overflow: hidden;
+	height: 394px;
+	position: relative;
+	background: url(images/banner.jpg) center center no-repeat;
+	background-size: cover;
+	margin-top: 0;
+
+	figure {
+		z-index: $zIndex-1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	img {
+		width: 100%;
+	}
+}
+
+/* Homepage intro text */
+
+.intro-text {
+	z-index: $zIndex-4;
+	position: relative;
+	text-align: center;
+	padding: 30px;
+	margin: 0;
+	background-position: center center;
+
+	@include breakpoint(xs) {
+		padding: 60px;
+	}
+
+	h1 {
+		color: $color-grayScale-f;
+		font-weight: 300;
+		font-size: 40px;
+		margin: 0 0 25px 0;
+
+		@include breakpoint(sm) {
+			font-size: 72px;
+		}
+	}
+	p {
+		color: #dff7fd;
+		margin: 0 auto;
+
+		@include breakpoint(sm) {
+			width: 73%;
+		}
+	}
+	.result-excerpt p {
+		color: $color-base;
+		width: 100%;
+	}
+}
+
+.home .content-container {
+	margin-bottom: 0;
+}
+
+.home .tabbed-content {
+	@include breakpoint("max-width: 1600px") {
+		width: 100%;
+	}
+	@include breakpoint("min-width: 1600px") {
+		width: 64.06667%;
+	}
+}
+.home .link-side {
+	@include breakpoint("max-width: 1600px") {
+		width: 100%;
+		margin: 2.5% 0 0 0;
+	}
+	@include breakpoint("min-width: 1600px") {
+		width: 30.73333%;
+	}
+}
+
+
+/* lifecycle ad */
+
+
+.home-lifecycle {
+	padding: 30px 30px 90px 30px;
+	margin: 0;
+	background: #fafafa;
+	@extend %clearfix;
+
+	@include breakpoint(sm) {
+		padding: 60px 60px 120px 60px;
+	}
+}
+.cycle-text {
+	width: 100%;
+
+	@include breakpoint("min-width: 1350px") {
+		width: 33.33333%;
+		float: left;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+}
+.icon-container {
+	width: 100%;
+	display: block;
+
+	@include breakpoint(sm) {
+	width: 600px;
+	margin: 0 auto;
+	}
+
+	@include breakpoint("min-width: 1350px") {
+		width: 60%;
+		float: right;
+	}
+}
+.lifecycle-icons {
+	padding: 0;
+	@extend %lifecycle-icon-list;
+
+	@include breakpoint(sm) {
+		width: 600px;
+		float: right;
+		background: url(images/cycle-bg.jpg) center center no-repeat;
+		height: 400px;
+		position: relative;
+	}
+
+	li {
+		@include breakpoint(sm) {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	i {
+		@include breakpoint(sm) {
+			height: 64px;
+			width: 64px;
+			font-size: 25px;
+			padding: 10px 0 0 0;
+			margin: 0;
+		}
+	}
+	a {
+		text-decoration: none;
+		border: none;
+	}
+
+	.icon-money,
+	.icon-file,
+	.icon-submit-paper,
+	.icon-handshake,
+	.icon-pen,
+	.icon-flask,
+	.icon-calculator,
+	.icon-clipboard,
+	.icon-users {
+		float: left;
+		clear: both;
+
+		@include breakpoint(sm) {
+			position: absolute;
+			float: none;
+		}
+	}
+
+	// Placeholder for responsive icon styles
+
+	.icon-money {
+		top: 38px;
+		left: 246px;
+	}
+	.icon-file {
+		right: 199px;
+		top: 72px;
+	}
+	.icon-submit-paper {
+		right: 154px;
+		top: 150px;
+	}
+	.icon-handshake {
+		top: 245px;
+		right: 172px;
+		@extend %up-size;
+	}
+	.icon-pen {
+		bottom: 19px;
+		right: 239px;
+	}
+	.icon-flask {
+		bottom: 17px;
+		left: 194px;
+	}
+	.icon-calculator {
+		bottom: 93px;
+		left: 121px;
+	}
+	.icon-clipboard {
+		top: 151px;
+		left: 102px;
+	}
+	.icon-users {
+		top: 68px;
+		left: 149px;
+		padding: 6px 0 0 0;
+		@extend %up-size;
+	}
+	h5 {
+		margin: 0;
+		font-size: 16px;
+		line-height: 1.2;
+		padding-top: 8px;
+		@include transition(all, 0.3s, ease-in-out, 0s);
+
+		@include breakpoint(sm) {
+			padding: 0;
+		}
+	}
+}
+.no-borderradius .lifecycle-icons i,
+.no-borderradius .lifecycle-widget i {
+	background: transparent url(images/icon-bg-sm.png) top center no-repeat !important;
+	background-size: 100%;
+	height: 54px;
+	width: 54px;
+	font-size: 20px;
+}
+a:hover {
+	i {
+		background: $color-research-green;
+	}
+	h5 {
+		color: $color-research-bluegray;
+	}
+}
+.label-1,
+.label-2,
+.label-3,
+.label-4,
+.label-5,
+.label-6,
+.label-7,
+.label-8,
+.label-9 {
+
+	@include breakpoint(sm) {
+		position: absolute;
+		width: 100px;
+		margin: 0;
+		padding: 0;
+	}
+}
+.label-1 {
+	top: 5px;
+	left: 224px;
+	@include breakpoint(sm) {
+		width: 120px;
+	}
+}
+.label-2 {
+	top: 84px;
+	right: 86px;
+}
+.label-3 {
+	right: 10px;
+	top: 165px;
+	@include breakpoint(sm) {
+		width: 130px;
+	}
+}
+.label-4 {
+	right: 26px;
+	top: 265px;
+	@include breakpoint(sm) {
+		width: 120px;
+	}
+}
+.label-5 {
+	bottom: 17px;
+	right: 145px;
+	@include breakpoint(sm) {
+		width: 80px;
+	}
+}
+.label-6 {
+	bottom: 14px;
+	left: 89px;
+}
+.label-7 {
+	left: 20px;
+	bottom: 91px;
+}
+.label-8 {
+	left: 11px;
+	top: 170px;
+}
+.label-9 {
+	top: 83px;
+	left: 64px;
+}
+
+/* Recommended for you */
+
+.home .tabs {
+	margin: 20px 0;
+}
+.home .list-widget {
+	margin-bottom: 0;
+}
+.recommended {
+	// @extend %borderbox;
+	border: 1px solid $color-lightgray-ef;
+	border-width: 1px 0;
+	@extend %clearfix;
+	@extend %padding-styles;
+	margin: 0;
+
+	.tabs {
+		text-align: center;
+		margin: -49px 0 0 0;
+
+		@include breakpoint(xs) {
+			margin: -69px 0 20px 0;
+		}
+
+		@include breakpoint(sm) {
+			margin: -129px 0 60px 0;
+		}
+	}
+	.list-widget {
+
+		h3 {
+			padding-right: 140px;
+		}
+	}
+}
+
+/* End content section */
+
+.end-content {
+	margin: 0;
+	padding: 40px;
+
+	@include breakpoint("min-width: 1600px") {
+		padding: 40px 0;
+	}
+	
+	@include breakpoint(md) {
+		padding: 60px;
+	}
+
+	h2 {
+		font-size: 24px;
+	}
+}

@@ -1,0 +1,219 @@
+// @todo these should be their own CSS files and only included when
+// specific Drupal libraries are used.
+@import "component/alert";
+@import "component/ajax";
+@import "component/field";
+@import "component/file";
+@import "component/filter";
+@import "component/form";
+@import "component/icon";
+@import "component/navbar";
+@import "component/node";
+@import "component/panel";
+@import "component/progress-bar";
+@import "component/table-drag";
+@import "component/tabs";
+@import "component/toolbar";
+
+// jQuery UI style overrides.
+@import "jquery-ui/autocomplete";
+
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Page header.
+.page-header {
+  margin-top: 0;
+}
+
+// Footer.
+.footer {
+  margin-top: 45px;
+  padding-top: 35px;
+  padding-bottom: 36px;
+  border-top: 1px solid #E5E5E5;
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+
+.help-block, .control-group .help-inline {
+  color: $gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.l-sideNav #quicksearch {
+  z-index: 10000;
+}
+
+.responsive-table {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #dcdfdf;
+  margin: 35px 0;
+  border-width: 1px 1px 1px 0;
+}
+table {
+  margin: 0;
+}
+.responsive-table table {
+  font-size: 15px;
+}
+
+.l-sideNav .primaryNav-menu a {
+    padding: 15px 20px;
+}
+
+/* BEGIN CUSTOM STYLES 
+------------------------------------------------------- */
+
+@font-face {
+  font-family: "BU-Default-Icons";
+  src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot");
+  src: url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.eot?#iefix") format("embedded-opentype"),
+       url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.woff") format("woff"),
+       url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.ttf") format("truetype"),
+       url("https://www.bu.edu/cdn/fonts/icons/bu-default-icons/bu-default-icons.svg#bu-default-icons") format("svg");
+  font-style: normal;
+  font-weight: 400;
+  // unicode-range:U+??????; /* Include all Unicode possiblities */
+}
+
+$color-research-teal: #00b3c4;
+$color-research-green: #8cbf01;
+$color-research-bluegray: #353c46;
+$color-research-medgray: #717b7c;
+$color-research-slategray: #6b9ea2;
+$color-research-warmgray: #e7ece6;
+$color-lightgray-ef: #eff3f6;
+$color-research-blue: #4481c6;
+
+/* styles for syntax highlighter */
+
+pre {
+    font-family: "Consolas", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace !important;
+    color: black;
+  // background: darken(#fafafa,2%);
+  padding: 10px;
+  background-color: #f7f7f9;
+    border: 1px solid #e1e1e8;
+  line-height: 1.3;
+}
+
+.color-block:before {
+  content: "\25A0";
+  // &#9632;
+}
+
+.page-template-landing .inline-search {
+    display: block;
+    clear: both;
+}
+
+/* -------- */
+
+.collapsible-group {
+  margin: 0 0 30px 0;
+}
+
+.number-list {
+  list-style-type: none;
+  padding: 0;
+  
+  li {
+    border: 1px solid darken($color-lightgray-ef, 4%);
+    border-width: 1px 0 0 0;
+    padding: 14px 0;
+    
+    &:last-child {
+      border-width: 1px 0;
+    }
+  }
+
+  strong {
+  padding: 0 5px 0 0;
+  }
+}
+
+.bu_collapsible_section ul.number-list {
+  padding: 0;
+  
+  li:first-child {
+  border-top: none;
+  }
+  li:last-child {
+    border-bottom: none;
+  }
+}
+
+.bu_collapsible_container {
+  margin: 12px 0 30px 0 !important;
+}
+
+.collapsible-group .bu_collapsible_container {
+  margin: 12px 0 12px 0 !important;
+}
+
+
+/* add to stylesheet */
+.menu-item-has-children > a:after {
+    padding-left: 10px !important;
+    font-size: 9px !important;
+}
+.row [class*="col-"] {
+    padding: 0 20px;
+    list-style: none !important;
+}
+.agate table, tr, td {
+    font-size: 11px !important;
+}
+.article .excerpt {
+  display: inline-block;
+}
+.news-posts .date {
+    display: block;
+    clear: both;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+    color: #717b7c;
+    padding: 10px 15px !important;
+}
+.news-posts .meta {
+    margin-bottom: 0 !important;
+    float: left !important;
+    display: contents !important;
+}
+ol.a {
+  list-style-type: lower-alpha !important;
+}
+.page-id-550 .list-widget:nth-child(10) .grid_object::before {
+    content: '\e80a';
+}

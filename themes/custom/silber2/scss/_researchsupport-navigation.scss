@@ -1,0 +1,502 @@
+/* Expanded menu */
+.primaryNav {
+	z-index: 10000;
+}
+
+.expanded-menu-container .primaryNav .navToggle {
+	display: none;
+
+	@include breakpoint("max-width: 768px") {
+		display: block;
+	}
+}
+#menu-expanded-menu {
+	overflow: hidden;
+	list-style-type: none;
+	padding: 0;
+	-webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-width: 200px;
+     -moz-column-width: 200px;
+          column-width: 200px;
+          -webkit-column-gap: 3em;
+     -moz-column-gap: 3em;
+          column-gap: 3em;
+
+      @include breakpoint(lg) {
+	      //height: 680px;
+      }
+
+          .sub-menu {
+	          list-style-type: none;
+	          padding: 10px 0 !important;
+          }
+
+          .sub-menu a {
+	         font-size: 14px !important;
+	         padding: 0 0 4px 0;
+          }
+}
+
+#menu-extended-menu {
+	padding: 0;
+		list-style-type: none;
+
+	.sub-menu {
+		list-style-type: none;
+	}
+}
+.nav-open .expanded-menu-container {
+	// width: 100%;
+	top: 0;
+
+	@include breakpoint(lg) {
+		// width: 90%;
+	}
+}
+.expanded-menu-toggle {
+	background: #292d36;
+	z-index: 900;
+	display: block;
+}
+.expanded-menu-container {
+
+	background: #292d36;
+	z-index: 900;
+	width: 100%;
+
+		//top: 78px;
+		left: 0;
+		//display: none;
+
+		@include breakpoint(sm) {
+			display: block;
+			position: absolute;
+			height: 100%;
+			width: auto;
+		}
+
+
+	.navToggle {
+		display: block;
+
+		@include breakpoint("max-width: 768px") {
+			//position: absolute;
+			//top: 123px;
+			display: none;
+		}
+	}
+
+	.toggle {
+		display: block;
+		height: 100%;
+
+
+		width: 46px;
+	}
+}
+
+// overlay styles //
+
+.overlay {
+	z-index: 9000;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #292d36;
+    -webkit-transition: all .4s cubic-bezier(.25, .8, .25, 1);
+    transition: all .4s cubic-bezier(.25, .8, .25, 1);
+
+	@include breakpoint("max-width: 600px") {
+			visibility: hidden;
+			display: none;
+	}
+}
+.lt-ie9 .overlay {
+	visibility: visible;
+	display: none;
+}
+.lt-ie9 .nav-open .overlay {
+	display: block;
+}
+
+.lt-ie9 .l-sideNav .navToggle {
+	position: absolute !important;
+	left: -50px !important;
+}
+.overlay .navToggle {
+	@include breakpoint(lg) {
+		display: block;
+	}
+}
+.close {
+	display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100000;
+    width: 50px;
+    height: 50px;
+}
+.expanded-menu-container {
+	z-index: 8000;
+	box-shadow: 0px 6px 6px 0 rgba(0,0,0,0.25);
+}
+.overlay-content {
+    	 padding: 60px;
+    	 position: relative;
+}
+.menu-expanded-menu-container {
+	overflow: hidden;
+}
+.nav-open .overlay {
+	left: 0;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+.nav-open .overlay {
+	overflow: scroll;
+
+	@include breakpoint(sm) {
+		left: 0;
+	}
+}
+// fix awkward column breaking in wider screens
+#menu-item-5000 {
+	@include breakpoint("min-width: 1200px") {
+		break-after: column; /* W3C */
+		-webkit-column-break-after: column; /* Safari & Chrome */
+		-moz-column-break-after: column; /* Firefox */
+		-ms-column-break-after: column; /* Internet Explorer */
+		-o-column-break-after: column; /* Opera */
+	}
+}
+
+/* Side Nav */
+
+.l-sideNav ul ul {
+	margin: 0;
+}
+.primaryNav {
+	padding: 0;
+
+	.level_1 {
+		&:hover {
+			background: lighten(#292d36,5%);
+			border-left: 4px solid darken($color-research-teal,5%) !important;
+		}
+	}
+	.active,
+	.active_section {
+		background: #34495e;
+		border-left: 4px solid $color-research-teal !important;
+		color: #fff;
+	}
+	.current_page_ancestor ul,
+	.current_page_parent ul,
+	.current_page_item ul {
+		padding: 10px 10px 10px 20px;
+		background: lighten($color-research-bluegray,2%);
+	}
+	.level_2 {
+		background: transparent;
+		border-left: none !important;
+	}
+}
+.primaryNav-menu li a.active_section {
+	color: #fff;
+}
+.primaryNav-menu li .level_2.active {
+	color: $color-research-teal !important;
+}
+.primaryNav .level_2 {
+	color: #a3adbb !important;
+
+	&:hover,
+	&:focus {
+		color: $color-research-teal !important;
+	}
+}
+.l-sideNav .primaryNav {
+	left: 50px;
+
+	@include breakpoint(lg) {
+		padding: 0;
+	}
+}
+.l-sideNav .primaryNav-menu {
+	@include breakpoint(md) {
+		margin: 0;
+	}
+}
+.l-sideNav .primaryNav-menu a {
+	padding: 10px 20px;
+	color: #c3cdd8;
+}
+.l-sideNav.nav-open .content {
+	@include breakpoint(lg) {
+		margin-left: 300px;
+	}
+
+	opacity: 0.1;
+}
+.nav-sidebar {
+	position: absolute;
+    top: 110px;
+    left: -43px;
+    width: 130px;
+    height: 20px;
+    displaY: inline-block;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.nav-open .menu-open {
+	display: none;
+}
+.menu-close {
+	display: none;
+}
+.nav-open .menu-close {
+	display: block;
+}
+
+.menu {
+	  max-width: 1400px;
+	  margin: 0 auto;
+	//display: none;
+}
+.l-sideNav .primaryNav {
+	top: auto;
+
+	@include breakpoint(md){
+		top: 80px;
+	}
+}
+.l-sideNav .content {
+	@include breakpoint(sm) {
+		margin-left: 50px;
+	}
+	@include breakpoint(lg) {
+		margin-left: 260px;
+	}
+}
+.nav-open #wpadminbar {
+	height: 0;
+	display: none;
+}
+.nav-sidebar {
+	display: none;
+
+	@include breakpoint(sm) {
+		display: block;
+	}
+}
+.primaryNav.is-open {
+	@include breakpoint(sm) {
+		display: none;
+	}
+}
+// prevent scrolling on body when navigation is open
+body.nav-open {
+	overflow: hidden;
+
+	@include breakpoint("max-width: 600px") {
+		overflow: visible;
+	}
+}
+.wrapper {
+    overflow: hidden;
+}
+html {
+	margin-top: 0 !important;
+}
+
+.wrapper .searchToggle {
+	@include breakpoint("min-width: 768px") {
+		display: none;
+	}
+}
+.l-sideNav .primaryNav {
+	top: auto;
+}
+.search-open.l-sideNav .primaryNav {
+	top: auto !important;
+}
+.menu-item {
+	margin: 0;
+	break-inside: avoid;
+	page-break-inside: avoid;
+
+}
+.glossary-tooltip-text {
+	font-size: 13px !important;
+}
+.tabs .active a {
+	position: relative;
+}
+.tabs .active a:after {
+	@include breakpoint(md) {
+		display: block;
+		content: "";
+		width: 100%;
+		height: 5px;
+		background: #fff;
+		position: absolute;
+		bottom: -3px;
+		left: 0;
+		z-index: 100000;
+	}
+}
+.menu-item-has-children {
+	margin: 0 0 20px 0;
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 700;
+		font-size: 17px;
+		border-bottom: 2px solid #4f5c6b;
+		padding: 0 0 7px 0;
+		display: inline-block;
+	}
+}
+.menu-item-has-children > a:after {
+	display: block;
+	float: right;
+	padding-left: 10px;
+	color: #4f5c6b;
+	font-size: 9px;
+	content: "\E800";
+    font-family: 'research-icons';
+    padding-bottom: 2px;
+    margin-top: 6px;
+}
+.sub-menu,
+.l-sideNav .current_page_item .sub-menu {
+	padding: 10px 0 0 0;
+
+	a {
+		color: $color-research-teal;
+		font-weight: 400;
+		border: none;
+
+		&:hover {
+			color: darken($color-research-teal,10%);
+		}
+	}
+}
+.l-sideNav .masthead-container .utilityNav {
+	padding-top: 20px;
+	margin-top: 40px;
+	border-top: 1px solid lighten($color-research-bluegray,10%);
+}
+.l-sideNav .primaryNav {
+	//height: 100%;
+
+	@include breakpoint(md) {
+		width: 210px;
+	}
+}
+
+.l-sideNav .primaryNav-menu a {
+	border: none;
+}
+.l-sideNav .level_2 {
+	padding: 4px 0 !important;
+}
+.primaryNav-menu {
+	margin: 0;
+}
+.is-open .primaryNav-menu,
+.is-open .utilityNav {
+	@include breakpoint("min-width: 600px") {
+			visibility: hidden;
+			display: none;
+		}
+}
+.sub-menu,
+.l-sideNav .current_page_item .sub-menu {
+	padding: 10px 0 0 0;
+
+	a {
+		color: $color-research-teal;
+		font-weight: 400;
+		border: none;
+
+		&:hover {
+			color: darken($color-research-teal,10%);
+		}
+	}
+}
+.navToggle {
+	height: 50px;
+	width: 50px;
+}
+.navToggle span,
+.navToggle span:before,
+.navToggle span:after {
+	width: 15px;
+	height: 3px;
+}
+.navToggle span:before {
+	top: -6px;
+}
+.navToggle span:after {
+	top: 6px;
+}
+.l-sideNav .navToggle {
+	margin: 0;
+
+	@include breakpoint(md) {
+		margin: 0;
+	}
+}
+// make second-level navigation visible when parent page is selected
+#primaryNav-menu .current_page_item ul,
+#primaryNav-menu .current_page_ancestor ul,
+#primaryNav-menu .current_page_parent ul {
+	display: none;
+	position: relative;
+	background: transparent;
+	left: auto;
+}
+.l-sideNav #contentnavlist .level_2 {
+	padding: 6px 0;
+}
+#contentnavlist .current_page_ancestor ul,
+#contentnavlist .current_page_parent ul,
+#contentnavlist .current_page_item ul {
+	display: block;
+}
+
+
+/* Utility Navigation */
+
+.utilityNav {
+	display: none;
+	margin: 20px 20px 0px 20px;
+	border-color: #4f5563;
+
+	a {
+		color: #7f889c !important;
+	}
+
+	@include breakpoint(lg) {
+		display: block;
+	}
+}
+
+// absolute position menu so it's sticky
+.posi .overlay {
+	top: 0 !important;
+}
+.posi {
+  position: fixed !important;
+  top: 0 !important;
+}

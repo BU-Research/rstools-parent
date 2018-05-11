@@ -1,0 +1,149 @@
+
+@media print {
+	.brand {
+		height: 50px;
+	}
+	.brand-signature:before {
+		position: absolute;
+		left: 0;
+		top: 5px;
+		display: block;
+		min-height: 35px;
+		content: url(https://www.bu.edu/cdn/images/logos/subbrand49x35.png);
+		-webkit-print-color-adjust: exact;
+	}
+	.brand-signature {
+		padding: 10px 30px 9px 56px;
+	}
+	.breadcrumbs {
+		padding: 20px;
+	}
+	.content-container {
+		padding: 20px;
+	}
+	.option-buttons,
+	.tabs,
+	.footbar,
+	.sidebar,
+	.siteFooter,
+	.collapsible-group:before,
+	.primaryNav,
+	.searchToggle,
+	.post-edit-link,
+	.button {
+		display: none !important;
+	}
+	.inline-search {
+		display: none !important;
+	}
+	.list-widget li {
+		margin-bottom: 5px;
+		font-size: 14px;
+	}
+	h1 {
+		font-size: 50px;
+	}
+	.calendar-callout {
+		margin: 0 !important;
+		padding: 0 !important;
+	}
+	.topic-list h2 {
+		font-size: 15px;
+		padding-bottom: 20px;
+	}
+	article[role=main] {
+		//margin: 0;
+		//padding: 0;
+	}
+	.page .content-container {
+		padding: 0 20px !important;
+	}
+	.arrow-list>li:before {
+		margin: 0;
+	}
+	.topic-list ul {
+		column-gap: 0 !important;
+		column-count: inherit !important;
+	}
+	.topic-list h2 {
+		float: none;
+	}
+	.expand-collapse-all {
+		display: none !important;
+	}
+	.col-1, .col-2, .col-quarter, .col-3, .col-third, .col-4, .col-5, .col-half, .col-6, .col-7, .col-two-third, .col-8, .col-three-quarter, .col-9, .col-10, .col-11, .col-full, .list-widget, .col-12, .footbar-container .widget {
+		float: none !important;
+	}
+	.main-banner {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+	.page-template-lifecycle h1 {
+		margin-bottom: 20px;
+	}
+	.list-widget {
+		border: none;
+		margin-bottom: 0;
+		padding: 0;
+		float: none !important;
+	}
+	.content-container {
+		margin: 0;
+		padding: 0;
+	}
+	.list-header,
+	.link-side,
+	.list-wrap
+	 {
+		padding: 10px 0;
+	}
+	.list-header {
+		padding-bottom: 15px;
+	}
+	.link-side {
+		padding: 0 !important;
+	}
+	.breadcrumbs,
+	.announcement {
+		//padding: 20px 0 !important;
+		text-align: left;
+		//width: 100%;
+	}
+	.navToggle {
+		display: none !important;
+	}
+	.list-header .button {
+		display: none;
+	}
+	.calendar-callout li {
+		float: none;
+		clear: both;
+	}
+	.content-container {
+		border: none;
+	}
+	.bu_collapsible_section {
+		display: block !important;
+		padding: 0;
+		border: none;
+	}
+	.bu_collapsible:after {
+		display: none;
+	}
+	.bu_collapsible {
+		border-bottom: none;
+	}
+	h1 {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 21px !important;
+		margin-bottom: 14px;
+	}
+	h3 {
+		font-size: 18px;
+	}
+	.title-intro {
+		margin-bottom: 10px;
+	}
+}

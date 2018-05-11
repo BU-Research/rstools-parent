@@ -1,0 +1,26 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Silber 2'
+description: 'Uses the Bootstrap framework Sass source files and must be compiled (not for beginners).'
+package: 'Bootstrap'
+
+regions:
+  header: 'Top Bar'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  breadcrumbs: 'Breadcrumbs'
+  content: 'Content'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footbar: 'Footbar'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries-extend:
+  bootstrap/framework:
+    - silber2/framework
