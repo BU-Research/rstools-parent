@@ -28,7 +28,7 @@ sites/*/files/
 sites/*/settings.php
 sites/*/settings.local.php
 sites/sites.php
-vendor
+/vendor/
 
 # Exclude IDE's project directory
 nbproject
