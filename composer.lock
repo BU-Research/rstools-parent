@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a1288c6e21cc9fa90e16db52c3960e3",
+    "content-hash": "493fa46cb3cbd8bb0a774f1bd0949d3f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1223,6 +1223,53 @@
             }
         },
         {
+            "name": "drupal/easy_install",
+            "version": "10.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/easy_install",
+                "reference": "8.x-10.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/easy_install-8.x-10.1.zip",
+                "reference": "8.x-10.1",
+                "shasum": "d16866909011bca62de29a8f7ef8e4da467fcfde"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-10.x": "10.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-10.1",
+                    "datestamp": "1526027584",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "karthikeyan-manivasagam",
+                    "homepage": "https://www.drupal.org/user/1494424"
+                }
+            ],
+            "description": "Provides UI to delete configuration while uninstalling or reinstalling the modules.",
+            "homepage": "https://www.drupal.org/project/easy_install",
+            "support": {
+                "source": "http://cgit.drupalcode.org/easy_install"
+            }
+        },
+        {
             "name": "drupal/entity",
             "version": "1.0.0-beta3",
             "source": {
@@ -1341,6 +1388,53 @@
             "homepage": "https://www.drupal.org/project/entity_reference_revisions",
             "support": {
                 "source": "http://cgit.drupalcode.org/entity_reference_revisions"
+            }
+        },
+        {
+            "name": "drupal/menu_export",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/menu_export",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_export-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "fe43b8fceda409ad2eaf63f2736159007986b503"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1524077713",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "sandeepguntaka",
+                    "homepage": "https://www.drupal.org/user/3397192"
+                }
+            ],
+            "description": "This module exports and imports menus and menu links.",
+            "homepage": "https://www.drupal.org/project/menu_export",
+            "support": {
+                "source": "http://cgit.drupalcode.org/menu_export"
             }
         },
         {
@@ -4429,16 +4523,16 @@
         },
         {
             "name": "zendframework/zend-feed",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-feed.git",
-                "reference": "abe88686124d492e0a2a84656f15e5482bfbe030"
+                "reference": "15a6ca78dd8f67b687e4f902657b4e420a8fd1e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-feed/zipball/abe88686124d492e0a2a84656f15e5482bfbe030",
-                "reference": "abe88686124d492e0a2a84656f15e5482bfbe030",
+                "url": "https://api.github.com/repos/zendframework/zend-feed/zipball/15a6ca78dd8f67b687e4f902657b4e420a8fd1e0",
+                "reference": "15a6ca78dd8f67b687e4f902657b4e420a8fd1e0",
                 "shasum": ""
             },
             "require": {
@@ -4486,7 +4580,7 @@
                 "feed",
                 "zf"
             ],
-            "time": "2017-12-04T17:59:38+00:00"
+            "time": "2018-05-14T21:45:18+00:00"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -5170,61 +5264,6 @@
                 "object graph"
             ],
             "time": "2017-10-19T19:58:43+00:00"
-        },
-        {
-            "name": "pear/console_table",
-            "version": "v1.3.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pear/Console_Table.git",
-                "reference": "1930c11897ca61fd24b95f2f785e99e0f36dcdea"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pear/Console_Table/zipball/1930c11897ca61fd24b95f2f785e99e0f36dcdea",
-                "reference": "1930c11897ca61fd24b95f2f785e99e0f36dcdea",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "suggest": {
-                "pear/Console_Color2": ">=0.1.2"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "Table.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jan Schneider",
-                    "homepage": "http://pear.php.net/user/yunosh"
-                },
-                {
-                    "name": "Tal Peer",
-                    "homepage": "http://pear.php.net/user/tal"
-                },
-                {
-                    "name": "Xavier Noguer",
-                    "homepage": "http://pear.php.net/user/xnoguer"
-                },
-                {
-                    "name": "Richard Heyes",
-                    "homepage": "http://pear.php.net/user/richard"
-                }
-            ],
-            "description": "Library that makes it easy to build console style tables.",
-            "homepage": "http://pear.php.net/package/Console_Table/",
-            "keywords": [
-                "console"
-            ],
-            "time": "2018-01-25T20:47:17+00:00"
         },
         {
             "name": "phar-io/manifest",
