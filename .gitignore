@@ -34,3 +34,5 @@ sites/sites.php
 nbproject
 .idea
 
+# Ignore sass-cache files.
+*.sass-cache*

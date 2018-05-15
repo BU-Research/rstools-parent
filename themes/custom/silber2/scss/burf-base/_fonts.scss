@@ -141,3 +141,13 @@
   font-weight: 400;
   //unicode-range:U+??????; /* Include all Unicode possiblities */
 }
+@font-face {
+  font-family: "research-icons";
+  src: url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.eot");
+  src: url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.eot?") format("embedded-opentype"),
+       url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.woff") format("woff"),
+       url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.ttf") format("truetype"),
+       url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.svg#research-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

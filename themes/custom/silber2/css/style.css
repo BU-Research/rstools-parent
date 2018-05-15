@@ -8918,6 +8918,13 @@ button.close {
   font-style: normal;
   font-weight: 400;
 }
+@font-face {
+  font-family: "research-icons";
+  src: url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.eot");
+  src: url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.eot?") format("embedded-opentype"), url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.woff") format("woff"), url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.ttf") format("truetype"), url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.svg#research-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* placeholders for theme use
 ----------------------------------------------------------------- */
 /* line 3, ../scss/burf-base/_grid.scss */
@@ -15278,16 +15285,8 @@ table thead {
   text-decoration: none;
 }
 
-/* custom fonts */
-@font-face {
-  font-family: 'research-icons';
-  src: url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.eot?68742951");
-  src: url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.eot?68742951#iefix") format("embedded-opentype"), url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.woff?68742951") format("woff"), url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.ttf?68742951") format("truetype"), url("http://www.bu.edu/researchsupport/wp-content/themes/r-researchsupport/fonts/font/research-icons.svg?68742951#research-icons") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 /* placeholder styles */
-/* line 16, ../scss/_researchsupport-custom.scss */
+/* line 4, ../scss/_researchsupport-custom.scss */
 .button, .label, .search-results a[href$=".pdf"]:after {
   text-transform: uppercase;
   font-size: 15px;
@@ -15295,7 +15294,7 @@ table thead {
   font-weight: 700;
 }
 
-/* line 23, ../scss/_researchsupport-custom.scss */
+/* line 11, ../scss/_researchsupport-custom.scss */
 .list-widget {
   border: 1px solid #e5e8e7;
   -webkit-border-radius: 3px;
@@ -15304,7 +15303,7 @@ table thead {
   border-radius: 3px;
 }
 
-/* line 28, ../scss/_researchsupport-custom.scss */
+/* line 16, ../scss/_researchsupport-custom.scss */
 .callout, .related-callout {
   border: 2px solid #00b3c4;
   padding: 30px 60px;
@@ -15315,7 +15314,7 @@ table thead {
   text-align: center;
   position: relative;
 }
-/* line 35, ../scss/_researchsupport-custom.scss */
+/* line 23, ../scss/_researchsupport-custom.scss */
 .callout .label, .related-callout .label {
   background: #00b3c4;
   margin: 0;
@@ -15326,68 +15325,68 @@ table thead {
   margin-left: -44px;
   box-shadow: 0px 0px 0px 5px #ffffff;
 }
-/* line 45, ../scss/_researchsupport-custom.scss */
+/* line 33, ../scss/_researchsupport-custom.scss */
 .callout h2, .related-callout h2 {
   font-size: 24px;
   margin: 0 0 10px 0;
 }
 
-/* line 50, ../scss/_researchsupport-custom.scss */
+/* line 38, ../scss/_researchsupport-custom.scss */
 .main-banner, .page-template-lifecycle .content-container,
 .page-template-landing .content-container, .on-this-page {
   padding: 20px;
 }
 @media screen and (min-width: 768px) {
-  /* line 50, ../scss/_researchsupport-custom.scss */
+  /* line 38, ../scss/_researchsupport-custom.scss */
   .main-banner, .page-template-lifecycle .content-container,
   .page-template-landing .content-container, .on-this-page {
     padding: 40px;
   }
 }
 @media screen and (min-width: 1750px) {
-  /* line 50, ../scss/_researchsupport-custom.scss */
+  /* line 38, ../scss/_researchsupport-custom.scss */
   .main-banner, .page-template-lifecycle .content-container,
   .page-template-landing .content-container, .on-this-page {
     padding: 20px 0;
   }
 }
 
-/* line 61, ../scss/_researchsupport-custom.scss */
+/* line 49, ../scss/_researchsupport-custom.scss */
 .recommended {
   padding: 10px 0;
 }
 @media screen and (min-width: 768px) {
-  /* line 61, ../scss/_researchsupport-custom.scss */
+  /* line 49, ../scss/_researchsupport-custom.scss */
   .recommended {
     padding: 60px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  /* line 68, ../scss/_researchsupport-custom.scss */
+  /* line 56, ../scss/_researchsupport-custom.scss */
   .lifecycle-icons .icon-handshake, .lifecycle-icons .icon-users {
     font-size: 30px;
   }
 }
 
-/* line 80, ../scss/_researchsupport-custom.scss */
+/* line 68, ../scss/_researchsupport-custom.scss */
 .content-container {
   padding: 20px;
 }
 @media screen and (min-width: 768px) {
-  /* line 80, ../scss/_researchsupport-custom.scss */
+  /* line 68, ../scss/_researchsupport-custom.scss */
   .content-container {
     padding: 40px;
   }
 }
 
-/* line 89, ../scss/_researchsupport-custom.scss */
+/* line 77, ../scss/_researchsupport-custom.scss */
 .lifecycle-icons li, .lifecycle-widget li {
   list-style-type: none;
   margin: 0 0 10px 0;
   padding: 10px 0;
 }
-/* line 95, ../scss/_researchsupport-custom.scss */
+/* line 83, ../scss/_researchsupport-custom.scss */
 .lifecycle-icons i, .lifecycle-widget i {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -15408,7 +15407,7 @@ table thead {
   -o-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
 }
-/* line 109, ../scss/_researchsupport-custom.scss */
+/* line 97, ../scss/_researchsupport-custom.scss */
 .lifecycle-icons .icon-money, .lifecycle-widget .icon-money,
 .lifecycle-icons .icon-file,
 .lifecycle-widget .icon-file,
@@ -15432,7 +15431,7 @@ table thead {
   clear: both;
 }
 
-/* line 123, ../scss/_researchsupport-custom.scss */
+/* line 111, ../scss/_researchsupport-custom.scss */
 .rotate {
   /* Safari */
   -webkit-transform: rotate(90deg);
@@ -15444,14 +15443,14 @@ table thead {
   -o-transform: rotate(90deg);
 }
 
-/* line 133, ../scss/_researchsupport-custom.scss */
+/* line 121, ../scss/_researchsupport-custom.scss */
 .lt-ie9 .rotate {
   /* Internet Explorer */
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 @media screen and (min-width: 992px) {
-  /* line 137, ../scss/_researchsupport-custom.scss */
+  /* line 125, ../scss/_researchsupport-custom.scss */
   .no-csscolumns #menu-expanded-menu .menu-item-has-children {
     float: left;
     width: 30%;
@@ -15459,12 +15458,12 @@ table thead {
   }
 }
 
-/* line 144, ../scss/_researchsupport-custom.scss */
+/* line 132, ../scss/_researchsupport-custom.scss */
 .hidden {
   display: none;
 }
 
-/* line 148, ../scss/_researchsupport-custom.scss */
+/* line 136, ../scss/_researchsupport-custom.scss */
 p:empty {
   display: none;
   margin: 0;
@@ -15474,30 +15473,30 @@ p:empty {
 ---------------------------------------------------- */
 /* header */
 /* temporary beta notice */
-/* line 162, ../scss/_researchsupport-custom.scss */
+/* line 150, ../scss/_researchsupport-custom.scss */
 .brand-signature {
   position: relative;
 }
 
-/* line 167, ../scss/_researchsupport-custom.scss */
+/* line 155, ../scss/_researchsupport-custom.scss */
 .masthead {
   background: #1f1e24;
   border: none;
 }
 
-/* line 171, ../scss/_researchsupport-custom.scss */
+/* line 159, ../scss/_researchsupport-custom.scss */
 .brand [class*="brand-"],
 .brand [class*="brand-"]:visited {
   color: #ffffff;
 }
 
-/* line 175, ../scss/_researchsupport-custom.scss */
+/* line 163, ../scss/_researchsupport-custom.scss */
 .brand {
   height: 78px;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 178, ../scss/_researchsupport-custom.scss */
+  /* line 166, ../scss/_researchsupport-custom.scss */
   .searchToggle {
     top: 73px !important;
     position: absolute;
@@ -15507,7 +15506,7 @@ p:empty {
 }
 
 @media screen and (max-width: 768px) {
-  /* line 186, ../scss/_researchsupport-custom.scss */
+  /* line 174, ../scss/_researchsupport-custom.scss */
   .search-open .searchToggle {
     top: 184px !important;
     position: absolute;
@@ -15516,45 +15515,45 @@ p:empty {
   }
 }
 
-/* line 194, ../scss/_researchsupport-custom.scss */
+/* line 182, ../scss/_researchsupport-custom.scss */
 .navToggle {
   position: relative;
   z-index: 1000;
 }
 
-/* line 198, ../scss/_researchsupport-custom.scss */
+/* line 186, ../scss/_researchsupport-custom.scss */
 .navToggle span {
   top: 24px;
 }
 
-/* line 201, ../scss/_researchsupport-custom.scss */
+/* line 189, ../scss/_researchsupport-custom.scss */
 .l-sideNav .brand .searchToggle {
   color: #fff;
 }
-/* line 204, ../scss/_researchsupport-custom.scss */
+/* line 192, ../scss/_researchsupport-custom.scss */
 .l-sideNav .brand .searchToggle:hover {
   color: #00b3c4;
 }
 
-/* line 208, ../scss/_researchsupport-custom.scss */
+/* line 196, ../scss/_researchsupport-custom.scss */
 .searchToggle:before {
   font-size: 24px;
   text-decoration: none !important;
 }
 
-/* line 212, ../scss/_researchsupport-custom.scss */
+/* line 200, ../scss/_researchsupport-custom.scss */
 .searchToggle {
   text-decoration: none !important;
   border: none;
 }
 
 /* content */
-/* line 219, ../scss/_researchsupport-custom.scss */
+/* line 207, ../scss/_researchsupport-custom.scss */
 .content {
   background: #fafafa;
 }
 
-/* line 222, ../scss/_researchsupport-custom.scss */
+/* line 210, ../scss/_researchsupport-custom.scss */
 .content-container {
   background: #ffffff;
   border: 1px solid #dde1e0;
@@ -15562,67 +15561,67 @@ p:empty {
   position: relative;
   max-width: 1400px;
 }
-/* line 231, ../scss/_researchsupport-custom.scss */
+/* line 219, ../scss/_researchsupport-custom.scss */
 .content-container a:hover {
   color: #008491;
 }
 @media screen and (min-width: 992px) {
-  /* line 222, ../scss/_researchsupport-custom.scss */
+  /* line 210, ../scss/_researchsupport-custom.scss */
   .content-container {
     padding: 30px;
   }
 }
 
-/* line 239, ../scss/_researchsupport-custom.scss */
+/* line 227, ../scss/_researchsupport-custom.scss */
 .edit-link {
   padding: 0 40px;
 }
 
 /* sidebar widget styles */
-/* line 246, ../scss/_researchsupport-custom.scss */
+/* line 234, ../scss/_researchsupport-custom.scss */
 .sidebar {
   padding: 0;
   margin: 0;
 }
 @media screen and (min-width: 992px) {
-  /* line 246, ../scss/_researchsupport-custom.scss */
+  /* line 234, ../scss/_researchsupport-custom.scss */
   .sidebar {
     padding: 0 0 0 40px;
   }
 }
 
-/* line 257, ../scss/_researchsupport-custom.scss */
+/* line 245, ../scss/_researchsupport-custom.scss */
 .home .sidebar {
   display: none;
 }
 
-/* line 260, ../scss/_researchsupport-custom.scss */
+/* line 248, ../scss/_researchsupport-custom.scss */
 .sidebar .widget {
   padding: 20px;
 }
 
-/* line 265, ../scss/_researchsupport-custom.scss */
+/* line 253, ../scss/_researchsupport-custom.scss */
 .widget_bu_text .widgetTitle {
   display: none;
 }
 
-/* line 269, ../scss/_researchsupport-custom.scss */
+/* line 257, ../scss/_researchsupport-custom.scss */
 .sidebar .widgetTitle {
   font-weight: 700;
 }
-/* line 272, ../scss/_researchsupport-custom.scss */
+/* line 260, ../scss/_researchsupport-custom.scss */
 .sidebar .widgetTitle a {
   color: #000;
 }
 
-/* line 277, ../scss/_researchsupport-custom.scss */
+/* line 265, ../scss/_researchsupport-custom.scss */
 .sidebar .widget,
 .sidebarPosts .widget {
   padding: 0;
 }
 
 /* widget child page listing */
-/* line 284, ../scss/_researchsupport-custom.scss */
+/* line 272, ../scss/_researchsupport-custom.scss */
 .bu-list-child-pages {
   border-bottom: 2px solid #eff3f6;
   padding: 0 0 10px 0;
@@ -15637,55 +15636,55 @@ p:empty {
   -moz-column-gap: 3em;
   column-gap: 3em;
 }
-/* line 298, ../scss/_researchsupport-custom.scss */
+/* line 286, ../scss/_researchsupport-custom.scss */
 .bu-list-child-pages h3 {
   font-size: 18px;
 }
 
-/* line 303, ../scss/_researchsupport-custom.scss */
+/* line 291, ../scss/_researchsupport-custom.scss */
 .widget_bu_pages li {
   border-color: #e7ece6;
 }
 
-/* line 307, ../scss/_researchsupport-custom.scss */
+/* line 295, ../scss/_researchsupport-custom.scss */
 .widget_bu_pages li li {
   padding: 0;
 }
 
-/* line 310, ../scss/_researchsupport-custom.scss */
+/* line 298, ../scss/_researchsupport-custom.scss */
 .has_children ul {
   border-color: #e7ece6;
   border-width: 0 0 0 4px;
 }
 
-/* line 314, ../scss/_researchsupport-custom.scss */
+/* line 302, ../scss/_researchsupport-custom.scss */
 .widget_bu_pages li a {
   text-decoration: none;
 }
 
-/* line 317, ../scss/_researchsupport-custom.scss */
+/* line 305, ../scss/_researchsupport-custom.scss */
 .sidebar .widgetTitle {
   font-weight: 700;
   text-transform: uppercase;
   border-bottom: 2px solid #e7ece6;
   padding: 0 0 8px 0;
 }
-/* line 323, ../scss/_researchsupport-custom.scss */
+/* line 311, ../scss/_researchsupport-custom.scss */
 .sidebar .widgetTitle a {
   color: #111;
 }
 
-/* line 327, ../scss/_researchsupport-custom.scss */
+/* line 315, ../scss/_researchsupport-custom.scss */
 .sidebar .widget {
   background: #f3f5f3;
   padding: 20px;
 }
 
-/* line 331, ../scss/_researchsupport-custom.scss */
+/* line 319, ../scss/_researchsupport-custom.scss */
 .sidebar #contentnavlist {
   border: none;
 }
-/* line 334, ../scss/_researchsupport-custom.scss */
+/* line 322, ../scss/_researchsupport-custom.scss */
 .sidebar #contentnavlist .level_1 {
   border-bottom: 2px solid #e7ece6;
   padding-top: 0;
@@ -15694,116 +15693,116 @@ p:empty {
   color: #111;
   border-top: 0 !important;
 }
-/* line 342, ../scss/_researchsupport-custom.scss */
+/* line 330, ../scss/_researchsupport-custom.scss */
 .sidebar #contentnavlist ul {
   border: none;
 }
-/* line 345, ../scss/_researchsupport-custom.scss */
+/* line 333, ../scss/_researchsupport-custom.scss */
 .sidebar #contentnavlist .level_2 {
   border-bottom: 1px solid #e7ece6;
 }
-/* line 348, ../scss/_researchsupport-custom.scss */
+/* line 336, ../scss/_researchsupport-custom.scss */
 .sidebar #contentnavlist ul > li:last-child .level_2 {
   border: none;
 }
-/* line 351, ../scss/_researchsupport-custom.scss */
+/* line 339, ../scss/_researchsupport-custom.scss */
 .sidebar #contentnavlist li:first-child {
   border-width: 0 0 1px 0;
 }
-/* line 354, ../scss/_researchsupport-custom.scss */
+/* line 342, ../scss/_researchsupport-custom.scss */
 .sidebar #contentnavlist a:hover {
   color: #009cab;
 }
 
 /* footbar */
-/* line 362, ../scss/_researchsupport-custom.scss */
+/* line 350, ../scss/_researchsupport-custom.scss */
 .footbar {
   overflow: hidden;
   padding: 0;
 }
 @media screen and (min-width: 992px) {
-  /* line 366, ../scss/_researchsupport-custom.scss */
+  /* line 354, ../scss/_researchsupport-custom.scss */
   .footbar .widget {
     margin: 0;
   }
 }
-/* line 373, ../scss/_researchsupport-custom.scss */
+/* line 361, ../scss/_researchsupport-custom.scss */
 .footbar .widget a {
   text-decoration: none;
   display: block;
   padding: 4px 0;
 }
-/* line 378, ../scss/_researchsupport-custom.scss */
+/* line 366, ../scss/_researchsupport-custom.scss */
 .footbar .widgetTitle {
   margin-bottom: 20px;
   font-weight: 600;
 }
-/* line 382, ../scss/_researchsupport-custom.scss */
+/* line 370, ../scss/_researchsupport-custom.scss */
 .footbar .widgetTitle a {
   color: #353c46;
 }
-/* line 386, ../scss/_researchsupport-custom.scss */
+/* line 374, ../scss/_researchsupport-custom.scss */
 .footbar .textwidget {
   color: #fff;
 }
-/* line 389, ../scss/_researchsupport-custom.scss */
+/* line 377, ../scss/_researchsupport-custom.scss */
 .footbar div:last-child {
   margin-bottom: 0;
 }
 
-/* line 393, ../scss/_researchsupport-custom.scss */
+/* line 381, ../scss/_researchsupport-custom.scss */
 .footbar-container {
   background: transparent;
   padding: 30px;
 }
 @media screen and (min-width: 992px) {
-  /* line 393, ../scss/_researchsupport-custom.scss */
+  /* line 381, ../scss/_researchsupport-custom.scss */
   .footbar-container {
     padding: 60px;
   }
 }
 @media screen and (min-width: 1750px) {
-  /* line 393, ../scss/_researchsupport-custom.scss */
+  /* line 381, ../scss/_researchsupport-custom.scss */
   .footbar-container {
     padding: 60px 0;
   }
 }
 
-/* line 406, ../scss/_researchsupport-custom.scss */
+/* line 394, ../scss/_researchsupport-custom.scss */
 .footbar .widget_bu_pages ul {
   border: none;
 }
-/* line 409, ../scss/_researchsupport-custom.scss */
+/* line 397, ../scss/_researchsupport-custom.scss */
 .footbar .widget_bu_pages li {
   border: none;
 }
 
 /* footer */
-/* line 416, ../scss/_researchsupport-custom.scss */
+/* line 404, ../scss/_researchsupport-custom.scss */
 .siteFooter {
   background: #fff;
   padding: 30px;
 }
 @media screen and (min-width: 1200px) {
-  /* line 416, ../scss/_researchsupport-custom.scss */
+  /* line 404, ../scss/_researchsupport-custom.scss */
   .siteFooter {
     padding: 40px 60px;
   }
 }
 
-/* line 424, ../scss/_researchsupport-custom.scss */
+/* line 412, ../scss/_researchsupport-custom.scss */
 .footer-brand {
   color: #353c46;
 }
 
-/* line 427, ../scss/_researchsupport-custom.scss */
+/* line 415, ../scss/_researchsupport-custom.scss */
 .siteFooter-info {
   padding: 0;
 }
 
 /* Typography
 ---------------------------------------------------- */
-/* line 435, ../scss/_researchsupport-custom.scss */
+/* line 423, ../scss/_researchsupport-custom.scss */
 h1 {
   font-weight: 300;
   font-size: 30px;
@@ -15811,61 +15810,61 @@ h1 {
   line-height: 1;
 }
 @media screen and (min-width: 768px) {
-  /* line 435, ../scss/_researchsupport-custom.scss */
+  /* line 423, ../scss/_researchsupport-custom.scss */
   h1 {
     font-size: 45px;
   }
 }
 @media screen and (min-width: 992px) {
-  /* line 435, ../scss/_researchsupport-custom.scss */
+  /* line 423, ../scss/_researchsupport-custom.scss */
   h1 {
     font-size: 60px;
     margin: 0 0 20px 0;
   }
 }
 
-/* line 450, ../scss/_researchsupport-custom.scss */
+/* line 438, ../scss/_researchsupport-custom.scss */
 h2 {
   color: #243d41;
   font-size: 20px;
 }
 @media screen and (min-width: 768px) {
-  /* line 450, ../scss/_researchsupport-custom.scss */
+  /* line 438, ../scss/_researchsupport-custom.scss */
   h2 {
     font-size: 28px;
   }
 }
 
-/* line 458, ../scss/_researchsupport-custom.scss */
+/* line 446, ../scss/_researchsupport-custom.scss */
 h3 {
   color: #004346;
   font-weight: 300;
   font-size: 18px;
 }
 @media screen and (min-width: 768px) {
-  /* line 458, ../scss/_researchsupport-custom.scss */
+  /* line 446, ../scss/_researchsupport-custom.scss */
   h3 {
     font-size: 25px;
   }
 }
 
-/* line 467, ../scss/_researchsupport-custom.scss */
+/* line 455, ../scss/_researchsupport-custom.scss */
 h4 {
   font-weight: 400;
 }
 
-/* line 470, ../scss/_researchsupport-custom.scss */
+/* line 458, ../scss/_researchsupport-custom.scss */
 h5 {
   color: #6b9ea2;
   font-size: 18px;
 }
 
-/* line 475, ../scss/_researchsupport-custom.scss */
+/* line 463, ../scss/_researchsupport-custom.scss */
 .content-container strong {
   color: #353c46;
 }
 
-/* line 478, ../scss/_researchsupport-custom.scss */
+/* line 466, ../scss/_researchsupport-custom.scss */
 a {
   -webkit-transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
@@ -15874,50 +15873,50 @@ a {
   transition: all 0.2s ease-in-out 0s;
 }
 
-/* line 481, ../scss/_researchsupport-custom.scss */
+/* line 469, ../scss/_researchsupport-custom.scss */
 body {
   font-family: "Benton-Sans", sans-serif;
   font-size: 16px;
   line-height: 1.5;
 }
 @media screen and (min-width: 500px) {
-  /* line 481, ../scss/_researchsupport-custom.scss */
+  /* line 469, ../scss/_researchsupport-custom.scss */
   body {
     font-size: 18px;
   }
 }
 
-/* line 490, ../scss/_researchsupport-custom.scss */
+/* line 478, ../scss/_researchsupport-custom.scss */
 pre {
   padding: 10px;
   background: #fafafa;
 }
 
 /* lists */
-/* line 497, ../scss/_researchsupport-custom.scss */
+/* line 485, ../scss/_researchsupport-custom.scss */
 ul {
   padding: 0 0 0 20px;
 }
 @media screen and (min-width: 992px) {
-  /* line 497, ../scss/_researchsupport-custom.scss */
+  /* line 485, ../scss/_researchsupport-custom.scss */
   ul {
     padding: 0 0 0 40px;
   }
 }
 
-/* line 505, ../scss/_researchsupport-custom.scss */
+/* line 493, ../scss/_researchsupport-custom.scss */
 ol {
   padding: 0;
   list-style-type: none;
   counter-reset: step-counter;
 }
-/* line 510, ../scss/_researchsupport-custom.scss */
+/* line 498, ../scss/_researchsupport-custom.scss */
 ol > li {
   counter-increment: step-counter;
   margin-bottom: 10px;
   padding-left: 37px;
 }
-/* line 515, ../scss/_researchsupport-custom.scss */
+/* line 503, ../scss/_researchsupport-custom.scss */
 ol > li:before {
   content: counter(step-counter);
   margin-right: 10px;
@@ -15937,62 +15936,62 @@ ol > li:before {
   text-align: center;
   float: left;
 }
-/* line 531, ../scss/_researchsupport-custom.scss */
+/* line 519, ../scss/_researchsupport-custom.scss */
 ol ul li {
   counter-increment: none;
   padding-left: 0;
 }
-/* line 535, ../scss/_researchsupport-custom.scss */
+/* line 523, ../scss/_researchsupport-custom.scss */
 ol ul li:before {
   content: "";
   display: none;
 }
 
-/* line 541, ../scss/_researchsupport-custom.scss */
+/* line 529, ../scss/_researchsupport-custom.scss */
 .alpha-list {
   counter-reset: listStyle;
 }
-/* line 544, ../scss/_researchsupport-custom.scss */
+/* line 532, ../scss/_researchsupport-custom.scss */
 .alpha-list > li {
   counter-increment: listStyle;
 }
-/* line 548, ../scss/_researchsupport-custom.scss */
+/* line 536, ../scss/_researchsupport-custom.scss */
 .alpha-list > li:before {
   content: counter(listStyle,lower-alpha);
 }
 
-/* line 552, ../scss/_researchsupport-custom.scss */
+/* line 540, ../scss/_researchsupport-custom.scss */
 ol ul {
   margin: 10px 0;
 }
 
-/* line 555, ../scss/_researchsupport-custom.scss */
+/* line 543, ../scss/_researchsupport-custom.scss */
 .roman-list {
   counter-reset: listStyle;
 }
-/* line 558, ../scss/_researchsupport-custom.scss */
+/* line 546, ../scss/_researchsupport-custom.scss */
 .roman-list > li {
   counter-increment: listStyle;
 }
-/* line 562, ../scss/_researchsupport-custom.scss */
+/* line 550, ../scss/_researchsupport-custom.scss */
 .roman-list > li:before {
   content: counter(listStyle,lower-roman);
 }
 
-/* line 566, ../scss/_researchsupport-custom.scss */
+/* line 554, ../scss/_researchsupport-custom.scss */
 .arrow-list {
   list-style-type: none;
 }
-/* line 569, ../scss/_researchsupport-custom.scss */
+/* line 557, ../scss/_researchsupport-custom.scss */
 .arrow-list > li {
   margin-bottom: 15px;
 }
-/* line 573, ../scss/_researchsupport-custom.scss */
+/* line 561, ../scss/_researchsupport-custom.scss */
 .arrow-list a {
   text-decoration: none;
   color: #004346;
 }
-/* line 578, ../scss/_researchsupport-custom.scss */
+/* line 566, ../scss/_researchsupport-custom.scss */
 .arrow-list > li:before {
   content: "\E800";
   font-family: 'research-icons';
@@ -16010,17 +16009,17 @@ ol ul {
   line-height: 2;
 }
 
-/* line 592, ../scss/_researchsupport-custom.scss */
+/* line 580, ../scss/_researchsupport-custom.scss */
 .check-list {
   padding: 0;
   list-style-type: none;
 }
-/* line 596, ../scss/_researchsupport-custom.scss */
+/* line 584, ../scss/_researchsupport-custom.scss */
 .check-list > li {
   margin-bottom: 12px;
   padding-left: 37px;
 }
-/* line 601, ../scss/_researchsupport-custom.scss */
+/* line 589, ../scss/_researchsupport-custom.scss */
 .check-list > li:before {
   content: "\2713";
   font-family: 'BU-Default-Icons';
@@ -16038,7 +16037,7 @@ ol ul {
 }
 
 /* tables */
-/* line 617, ../scss/_researchsupport-custom.scss */
+/* line 605, ../scss/_researchsupport-custom.scss */
 table th {
   background: #353c46;
   color: #fff;
@@ -16046,29 +16045,29 @@ table th {
   text-align: left;
 }
 
-/* line 625, ../scss/_researchsupport-custom.scss */
+/* line 613, ../scss/_researchsupport-custom.scss */
 tr:nth-child(even) {
   background: #fafafa;
 }
 
-/* line 628, ../scss/_researchsupport-custom.scss */
+/* line 616, ../scss/_researchsupport-custom.scss */
 tr:nth-child(odd) {
   background: #FFF;
 }
 
 /* responsive table styles */
-/* line 634, ../scss/_researchsupport-custom.scss */
+/* line 622, ../scss/_researchsupport-custom.scss */
 .responsive-table {
   width: 100%;
 }
 
 /* Profiles
 ---------------------------------------------------- */
-/* line 641, ../scss/_researchsupport-custom.scss */
+/* line 629, ../scss/_researchsupport-custom.scss */
 .profile-listing .basic {
   border-top: 2px solid #eff3f3;
 }
-/* line 643, ../scss/_researchsupport-custom.scss */
+/* line 631, ../scss/_researchsupport-custom.scss */
 .profile-listing .basic figure {
   width: 70px;
   height: 70px;
@@ -16079,39 +16078,39 @@ tr:nth-child(odd) {
   margin-right: 10px;
   margin-top: -10px;
 }
-/* line 655, ../scss/_researchsupport-custom.scss */
+/* line 643, ../scss/_researchsupport-custom.scss */
 .profile-listing .basic li {
   border-bottom: 2px solid #eff3f3;
   padding: 20px 0;
   text-align: center;
 }
 @media screen and (min-width: 500px) {
-  /* line 655, ../scss/_researchsupport-custom.scss */
+  /* line 643, ../scss/_researchsupport-custom.scss */
   .profile-listing .basic li {
     text-align: left;
   }
 }
-/* line 664, ../scss/_researchsupport-custom.scss */
+/* line 652, ../scss/_researchsupport-custom.scss */
 .profile-listing .basic li:last-child {
   border-bottom: none;
 }
 @media screen and (min-width: 768px) {
-  /* line 655, ../scss/_researchsupport-custom.scss */
+  /* line 643, ../scss/_researchsupport-custom.scss */
   .profile-listing .basic li {
     padding: 25px 65px 25px 0;
   }
 }
-/* line 674, ../scss/_researchsupport-custom.scss */
+/* line 662, ../scss/_researchsupport-custom.scss */
 .profile-listing .basic .profile-name {
   color: #353c46;
 }
-/* line 677, ../scss/_researchsupport-custom.scss */
+/* line 665, ../scss/_researchsupport-custom.scss */
 .profile-listing .basic .profile-title,
 .profile-listing .basic .profile-phone {
   font-size: 14px;
 }
 @media screen and (min-width: 768px) {
-  /* line 681, ../scss/_researchsupport-custom.scss */
+  /* line 669, ../scss/_researchsupport-custom.scss */
   .profile-listing .basic .profile-email {
     position: absolute;
     right: 0;
@@ -16120,7 +16119,7 @@ tr:nth-child(odd) {
 }
 
 @media screen and (min-width: 500px) {
-  /* line 690, ../scss/_researchsupport-custom.scss */
+  /* line 678, ../scss/_researchsupport-custom.scss */
   .basic .initials {
     float: left;
     margin-right: 20px;
@@ -16129,7 +16128,7 @@ tr:nth-child(odd) {
 
 /* Search styles
 ---------------------------------------------------- */
-/* line 700, ../scss/_researchsupport-custom.scss */
+/* line 688, ../scss/_researchsupport-custom.scss */
 #q {
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
@@ -16139,13 +16138,13 @@ tr:nth-child(odd) {
   border: none;
 }
 @media screen and (min-width: 1200px) {
-  /* line 700, ../scss/_researchsupport-custom.scss */
+  /* line 688, ../scss/_researchsupport-custom.scss */
   #q {
     width: 100%;
   }
 }
 
-/* line 709, ../scss/_researchsupport-custom.scss */
+/* line 697, ../scss/_researchsupport-custom.scss */
 input[type="submit"] {
   background-color: #8cbf01;
   padding: 18px;
@@ -16156,25 +16155,25 @@ input[type="submit"] {
   border-radius: 5px;
 }
 
-/* line 715, ../scss/_researchsupport-custom.scss */
+/* line 703, ../scss/_researchsupport-custom.scss */
 .typeahead__container button {
   width: auto !important;
 }
 @media screen and (min-width: 768px) {
-  /* line 715, ../scss/_researchsupport-custom.scss */
+  /* line 703, ../scss/_researchsupport-custom.scss */
   .typeahead__container button {
     width: 150px !important;
   }
 }
 
-/* line 722, ../scss/_researchsupport-custom.scss */
+/* line 710, ../scss/_researchsupport-custom.scss */
 .inline-search {
   position: relative;
   background: #e7ece6;
   padding: 10px;
   margin: 0 0 30px 0;
 }
-/* line 729, ../scss/_researchsupport-custom.scss */
+/* line 717, ../scss/_researchsupport-custom.scss */
 .inline-search .button {
   position: absolute;
   margin: 0;
@@ -16182,54 +16181,54 @@ input[type="submit"] {
   right: 20px;
 }
 @media screen and (min-width: 768px) {
-  /* line 729, ../scss/_researchsupport-custom.scss */
+  /* line 717, ../scss/_researchsupport-custom.scss */
   .inline-search .button {
     width: 150px;
   }
 }
-/* line 739, ../scss/_researchsupport-custom.scss */
+/* line 727, ../scss/_researchsupport-custom.scss */
 .inline-search label,
 .inline-search select {
   display: inherit;
   margin: 0;
 }
-/* line 744, ../scss/_researchsupport-custom.scss */
+/* line 732, ../scss/_researchsupport-custom.scss */
 .inline-search label {
   padding: 0;
 }
 
-/* line 748, ../scss/_researchsupport-custom.scss */
+/* line 736, ../scss/_researchsupport-custom.scss */
 fieldset {
   margin: 10px;
 }
 
-/* line 754, ../scss/_researchsupport-custom.scss */
+/* line 742, ../scss/_researchsupport-custom.scss */
 .has-filter {
   margin-bottom: 0;
 }
-/* line 757, ../scss/_researchsupport-custom.scss */
+/* line 745, ../scss/_researchsupport-custom.scss */
 .has-filter #q {
   width: 96%;
 }
-/* line 760, ../scss/_researchsupport-custom.scss */
+/* line 748, ../scss/_researchsupport-custom.scss */
 .has-filter .search-submit {
   left: auto;
   right: 20px;
 }
 @media screen and (min-width: 992px) {
-  /* line 760, ../scss/_researchsupport-custom.scss */
+  /* line 748, ../scss/_researchsupport-custom.scss */
   .has-filter .search-submit {
     left: 41%;
     right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 760, ../scss/_researchsupport-custom.scss */
+  /* line 748, ../scss/_researchsupport-custom.scss */
   .has-filter .search-submit {
     left: 52%;
   }
 }
-/* line 773, ../scss/_researchsupport-custom.scss */
+/* line 761, ../scss/_researchsupport-custom.scss */
 .has-filter .filter-button {
   position: relative;
   right: auto;
@@ -16239,36 +16238,36 @@ fieldset {
   margin: 10px;
 }
 @media screen and (min-width: 992px) {
-  /* line 773, ../scss/_researchsupport-custom.scss */
+  /* line 761, ../scss/_researchsupport-custom.scss */
   .has-filter .filter-button {
     float: right;
   }
 }
-/* line 785, ../scss/_researchsupport-custom.scss */
+/* line 773, ../scss/_researchsupport-custom.scss */
 .has-filter fieldset {
   width: 100%;
 }
 @media screen and (min-width: 992px) {
-  /* line 785, ../scss/_researchsupport-custom.scss */
+  /* line 773, ../scss/_researchsupport-custom.scss */
   .has-filter fieldset {
     width: 50%;
     float: left;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 785, ../scss/_researchsupport-custom.scss */
+  /* line 773, ../scss/_researchsupport-custom.scss */
   .has-filter fieldset {
     width: 55%;
   }
 }
 
 /* search results */
-/* line 803, ../scss/_researchsupport-custom.scss */
+/* line 791, ../scss/_researchsupport-custom.scss */
 .search-results h2 {
   font-size: 21px;
   margin: 0 0 10px 0;
 }
-/* line 808, ../scss/_researchsupport-custom.scss */
+/* line 796, ../scss/_researchsupport-custom.scss */
 .search-results a[href$=".pdf"]:after {
   content: 'PDF';
   color: #ffffff;
@@ -16283,27 +16282,27 @@ fieldset {
   background: #353c46;
   margin-left: 5px;
 }
-/* line 822, ../scss/_researchsupport-custom.scss */
+/* line 810, ../scss/_researchsupport-custom.scss */
 .search-results article {
   border-bottom: 2px solid #dde1e0;
   padding: 20px 0;
 }
-/* line 826, ../scss/_researchsupport-custom.scss */
+/* line 814, ../scss/_researchsupport-custom.scss */
 .search-results article:last-child {
   border: none;
 }
-/* line 830, ../scss/_researchsupport-custom.scss */
+/* line 818, ../scss/_researchsupport-custom.scss */
 .search-results article p {
   margin: 0;
 }
 
-/* line 836, ../scss/_researchsupport-custom.scss */
+/* line 824, ../scss/_researchsupport-custom.scss */
 .l-sideNav #quicksearch {
   z-index: 10000;
 }
 
 /* Temporary Search Fix */
-/* line 842, ../scss/_researchsupport-custom.scss */
+/* line 830, ../scss/_researchsupport-custom.scss */
 input {
   -webkit-border-radius: 5px 0 0 5px;
   -moz-border-radius: 5px 0 0 5px;
@@ -16312,7 +16311,7 @@ input {
 }
 
 /* General Responsi Updates */
-/* line 849, ../scss/_researchsupport-custom.scss */
+/* line 837, ../scss/_researchsupport-custom.scss */
 .screen-reader-text,
 .screen-reader-text span,
 .ui-helper-hidden-accessible {
@@ -16326,18 +16325,18 @@ input {
   border: 0;
 }
 
-/* line 861, ../scss/_researchsupport-custom.scss */
+/* line 849, ../scss/_researchsupport-custom.scss */
 #quicksearch .button {
   float: right;
   margin: 0;
 }
 
-/* line 865, ../scss/_researchsupport-custom.scss */
+/* line 853, ../scss/_researchsupport-custom.scss */
 .error-404 #quicksearch {
   position: relative;
 }
 
-/* line 868, ../scss/_researchsupport-custom.scss */
+/* line 856, ../scss/_researchsupport-custom.scss */
 #quicksearch .button {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -16353,31 +16352,31 @@ input {
   border-top-left-radius: 0;
 }
 
-/* line 879, ../scss/_researchsupport-custom.scss */
+/* line 867, ../scss/_researchsupport-custom.scss */
 #quicksearch label,
 #quicksearch select {
   display: inherit;
   margin: 0;
 }
 
-/* line 884, ../scss/_researchsupport-custom.scss */
+/* line 872, ../scss/_researchsupport-custom.scss */
 #quicksearch {
   text-decoration: none !important;
 }
 
-/* line 887, ../scss/_researchsupport-custom.scss */
+/* line 875, ../scss/_researchsupport-custom.scss */
 #quicksearch label {
   padding: 0;
 }
 
-/* line 890, ../scss/_researchsupport-custom.scss */
+/* line 878, ../scss/_researchsupport-custom.scss */
 #q {
   float: left;
 }
 
 /* Icon Fonts
 ---------------------------------------------------- */
-/* line 898, ../scss/_researchsupport-custom.scss */
+/* line 886, ../scss/_researchsupport-custom.scss */
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "research";
   font-style: normal;
@@ -16404,84 +16403,84 @@ input {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* line 931, ../scss/_researchsupport-custom.scss */
+/* line 919, ../scss/_researchsupport-custom.scss */
 .icon-arrow:before {
   content: '\e800';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 932, ../scss/_researchsupport-custom.scss */
+/* line 920, ../scss/_researchsupport-custom.scss */
 .icon-money:before {
   content: '\e801';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 933, ../scss/_researchsupport-custom.scss */
+/* line 921, ../scss/_researchsupport-custom.scss */
 .icon-calculator:before {
   content: '\e802';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 934, ../scss/_researchsupport-custom.scss */
+/* line 922, ../scss/_researchsupport-custom.scss */
 .icon-clipboard:before {
   content: '\e803';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 935, ../scss/_researchsupport-custom.scss */
+/* line 923, ../scss/_researchsupport-custom.scss */
 .icon-file:before {
   content: '\e804';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 936, ../scss/_researchsupport-custom.scss */
+/* line 924, ../scss/_researchsupport-custom.scss */
 .icon-flask:before {
   content: '\e805';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 937, ../scss/_researchsupport-custom.scss */
+/* line 925, ../scss/_researchsupport-custom.scss */
 .icon-handshake:before {
   content: '\e806';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 938, ../scss/_researchsupport-custom.scss */
+/* line 926, ../scss/_researchsupport-custom.scss */
 .icon-submit-paper:before {
   content: '\e807';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 939, ../scss/_researchsupport-custom.scss */
+/* line 927, ../scss/_researchsupport-custom.scss */
 .icon-pen:before {
   content: '\e808';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 940, ../scss/_researchsupport-custom.scss */
+/* line 928, ../scss/_researchsupport-custom.scss */
 .icon-printer:before {
   content: '\e809';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 941, ../scss/_researchsupport-custom.scss */
+/* line 929, ../scss/_researchsupport-custom.scss */
 .icon-users:before {
   content: '\e80a';
   font-family: "research-icons";
 }
 
 /* '' */
-/* line 942, ../scss/_researchsupport-custom.scss */
+/* line 930, ../scss/_researchsupport-custom.scss */
 .icon-megaphone:before {
   content: '\1F4E2';
   font-family: "BU-Default-Icons";
@@ -16490,66 +16489,66 @@ input {
 /* '' */
 /* Default pages
 ---------------------------------------------------- */
-/* line 949, ../scss/_researchsupport-custom.scss */
+/* line 937, ../scss/_researchsupport-custom.scss */
 .feedback p {
   font-size: 16px;
 }
 
-/* line 953, ../scss/_researchsupport-custom.scss */
+/* line 941, ../scss/_researchsupport-custom.scss */
 .also-see h4 {
   display: inline;
 }
 @media screen and (min-width: 768px) {
-  /* line 953, ../scss/_researchsupport-custom.scss */
+  /* line 941, ../scss/_researchsupport-custom.scss */
   .also-see h4 {
     float: left;
   }
 }
-/* line 960, ../scss/_researchsupport-custom.scss */
+/* line 948, ../scss/_researchsupport-custom.scss */
 .also-see p {
   padding: 0 0 0 10px;
   overflow: hidden;
 }
 
-/* line 965, ../scss/_researchsupport-custom.scss */
+/* line 953, ../scss/_researchsupport-custom.scss */
 .intro {
   padding: 14px 0;
   margin: 0 0 20px 0;
 }
 
-/* line 969, ../scss/_researchsupport-custom.scss */
+/* line 957, ../scss/_researchsupport-custom.scss */
 .main-banner {
   margin: 0 auto;
   max-width: 1400px;
   background: #fafafa;
 }
 @media screen and (min-width: 1800px) {
-  /* line 969, ../scss/_researchsupport-custom.scss */
+  /* line 957, ../scss/_researchsupport-custom.scss */
   .main-banner {
     padding: 40px 0;
   }
 }
 
-/* line 980, ../scss/_researchsupport-custom.scss */
+/* line 968, ../scss/_researchsupport-custom.scss */
 .title-intro {
   display: inline-block;
   float: left;
 }
 @media screen and (min-width: 1200px) {
-  /* line 980, ../scss/_researchsupport-custom.scss */
+  /* line 968, ../scss/_researchsupport-custom.scss */
   .title-intro {
     width: 60%;
   }
 }
-/* line 998, ../scss/_researchsupport-custom.scss */
+/* line 986, ../scss/_researchsupport-custom.scss */
 .title-intro + article[role="main"] {
   padding-top: 0;
 }
-/* line 1001, ../scss/_researchsupport-custom.scss */
+/* line 989, ../scss/_researchsupport-custom.scss */
 .title-intro .intro {
   margin: 0;
 }
-/* line 1004, ../scss/_researchsupport-custom.scss */
+/* line 992, ../scss/_researchsupport-custom.scss */
 .title-intro h1 {
   margin: 0;
 }
@@ -17565,7 +17564,7 @@ html {
   color: #4f5c6b;
   font-size: 9px;
   content: "\E800";
-  font-family: 'research-icons';
+  font-family: "research-icons";
   padding-bottom: 2px;
   margin-top: 6px;
 }

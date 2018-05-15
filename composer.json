@@ -14,7 +14,9 @@
         "drupal/profile": "^1.0@RC",
         "drupal/menu_export": "^1.2",
         "drupal/easy_install": "^10.1",
-        "drupal/context": "^4.0@beta"
+        "drupal/context": "^4.0@beta",
+        "drupal/link_attributes": "^1.2",
+        "drupal/menu_block": "^1.5"
     },
     "replace": {
         "drupal/core": "^8.5"

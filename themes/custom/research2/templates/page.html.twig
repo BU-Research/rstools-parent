@@ -56,12 +56,8 @@
 {# Navbar #}
 {% if page.header %}
   {% block navbar %}
-    {%
-      set navbar_classes = [
-        'masthead',
-      ]
-    %}
-    <header{{ navbar_attributes.addClass(navbar_classes) }} role="banner">
+   
+    <header role="banner">
       <div class="masthead-container">
         <div class="brand">
         {{ page.header }}

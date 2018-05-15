@@ -31,3 +31,14 @@ function silber2_theme_suggestions_block_alter(array &$suggestions, array $varia
   }
   return $suggestions;
 }
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function silber2_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  // Remove the block and replace dashes with underscores in the block ID to
+  // use for the hook name.
+  if (isset($variables['attributes']['block'])) {
+    $hook = str_replace(array('block-', '-'), array('', '_'), $variables['attributes']['block']);
+    $suggestions[] = $variables['theme_hook_original'] . '__' . $hook;
+  }
+}

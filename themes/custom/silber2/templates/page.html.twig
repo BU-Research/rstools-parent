@@ -72,7 +72,7 @@
       <div class="overlay">
         <div class="overlay-content">
           <div class="menu-expanded-menu-container">
-            {{ page.navigation }}
+            {{ page.navigation_collapsible }}
           </div>
         </div>
       <div class="close">
@@ -94,6 +94,9 @@
     <a href="#extended-menu" class="navToggle"><span>Menu</span></a>
     <nav class="primaryNav" role="navigation">
         {{ page.navigation }}
+    <nav class="utilityNav" role="navigation">
+      {{ page.navigation_utility}}
+    </nav>
     </nav>
   </div>
   <!-- End Expanded Menu Container -->   
