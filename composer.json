@@ -13,7 +13,8 @@
         "drupal/redhen": "^1.0@alpha",
         "drupal/profile": "^1.0@RC",
         "drupal/menu_export": "^1.2",
-        "drupal/easy_install": "^10.1"
+        "drupal/easy_install": "^10.1",
+        "drupal/context": "^4.0@beta"
     },
     "replace": {
         "drupal/core": "^8.5"
