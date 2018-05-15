@@ -1,0 +1,303 @@
+/* START: Centers & Institutes ----------------------------------------------------------------- */
+/* New styles */
+	.ci-tab-bar {
+		background: #f3f3f3;
+		z-index: 100000;
+		overflow: visible;
+	}
+	.ci-components {
+		padding: 25px;
+		@include clearfix;
+	}
+	.ci-tab {
+		display: inline-block;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding-bottom: 15px;
+	}
+	.ci-tabs {
+		border-bottom: 1px solid #e7e7e7;
+		width: 100%;
+		padding: 15px 25px 0 25px;
+		color: #aeafb1;
+		cursor: default;
+	}
+	.ci-tabs .active {
+		color: $black;
+
+		@include breakpoint(extra_small) {
+			border-bottom: 2px solid $aqua;
+		}
+	}
+	.ci-tab-letters {
+		display: block;
+
+		@include breakpoint(extra_small) {
+		margin-left: 40px;
+		display: inline-block;
+		}
+	}
+	.blur {
+		@include opacity(0.2);
+		z-index: 100;
+		@include transition(all, 250ms, ease-in-out, 0s);
+	}
+	.letter-nav .nav {
+		margin: 0 auto;
+		text-align: center;
+	}
+	#ci-list .sectionTitle {
+		border-bottom: none;
+	}
+	.ci-component {
+		position: relative;
+	}
+	.typeahead-button {
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 100000;
+		border-radius: 0;
+		height: 50px;
+		text-transform: uppercase;
+
+		@include breakpoint(extra_small) {
+			width: 150px;
+		}
+	}
+	.typeahead-button .icon-redirect {
+		padding-right: 5px;
+		//font-size: 12px;
+	}
+/* Search styles */
+.ci-search {
+	margin: 20px 0 30px 0;
+	border-bottom: 1px solid #dcdfdf;
+	padding-bottom: 30px;
+
+	.quicksearch {
+		position: relative;
+		display: block;
+		padding-right: 96px;
+	}
+	.quicksearch label {
+		display: none;
+	}
+	.quicksearch .search {
+		width: 100%;
+		padding: 10px;
+		border: 1px solid $light-light-gray;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		color: $light-gray;
+
+		&:focus {
+		color: $black;
+		}
+	}
+	.quicksearch .button {
+		@include border-radius(0px);
+		position: absolute;
+		top: 0;
+		right: 0;
+		overflow: hidden;
+		width: 96px;
+		height: 46px;
+		padding: 0;
+		border: none;
+		text-indent: 100%;
+		white-space: nowrap;
+	}
+}
+
+.typeahead,
+.twitter-typeahead,
+.tt-dropdown-menu {
+	width: 100% !important;
+	z-index: 100000 !important;
+}
+.tt-dropdown-menu {
+	border-radius: 0;
+	margin-top: 0;
+}
+/* Listing styles */
+#ci-list {
+	position: relative;
+	padding-top: 30px;
+
+	/*@include breakpoint(extra_small) {
+	padding-top: 60px;
+	}
+
+	@include breakpoint(small) {
+	padding-top: 50px;
+	}
+
+	@include breakpoint(medium) {
+	padding-top: 66px;
+	}*/
+	.nav {
+		background: #f3f3f4;
+	}
+	ul {
+		list-style-type: none;
+	}
+	h2 {
+		margin-bottom: 10px;
+		border-bottom: 2px solid $light-light-light-gray;
+	}
+	.letter li {
+		margin-bottom: 10px;
+
+		@include breakpoint(small) {
+		display: inline-block;
+		-webkit-column-break-inside: avoid;
+		-moz-break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid;
+		width: 100%;
+		}
+	}
+	.letter a {
+		color: $blue;
+
+		&:hover,
+		&:focus {
+		text-decoration: underline;
+		}
+	}
+	.letter .featured a:before {
+		display: block;
+		width: 60px;
+		float: left;
+		margin: 2px 6px 0 0;
+		padding: 2px 4px;
+		font-size: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $black;
+		background-color: $yellow;
+		content: "featured";
+	}
+	.letter ul {
+		@include breakpoint(small) {
+		-webkit-column-count: 2;
+		-webkit-column-gap: 20px;
+		-moz-column-count: 2;
+		-moz-column-gap: 20px;
+		-o-column-count: 2;
+		-o-column-gap: 20px;
+		column-count: 2;
+		column-gap: 20px;
+		}
+
+		@include breakpoint(medium) {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		-o-column-count: 4;
+		column-count: 4;
+		}
+	}
+}
+/* Jump to letter navigation styles */
+.letter-nav {
+	//position: absolute;
+	//top: 0;
+	//left: 0;
+	background: #f3f3f4;
+	width: 100%;
+
+	li {
+		display: inline;
+	}
+	a {
+		position: relative;
+		display: block;
+		float: left;
+		width: 24px;
+		font-weight: bold;
+		line-height: 28px;
+		text-align: center;
+		color: $light-gray;
+		background-color: $light-light-light-gray;
+
+		&:hover,
+		&:focus {
+		color: $black;
+		}
+
+		@include breakpoint(small) {
+		line-height: 30px;
+		}
+
+		@include breakpoint(medium) {
+		width: 30px;
+		line-height: 36px;
+		}
+
+		@include breakpoint(large) {
+		width: 36px;
+		}
+	}
+	.disabled a {
+		color: $light-light-gray;
+
+		&:hover,
+		&:focus {
+		color: $light-light-gray;
+		cursor: default;
+		}
+	}
+	/*.active a {
+		color: $black;
+		background-color: $yellow;
+	}
+	.active a:after {
+		@include breakpoint(small) {
+		position: absolute;
+		left: 4px;
+		top: 30px;
+		width: 0;
+		height: 0;
+		border: solid transparent;
+		border-color: rgba(0, 0, 0, 0);
+		border-top-color: $yellow;
+		border-width: 8px;
+		content: " ";
+		pointer-events: none;
+		}
+
+		@include breakpoint(medium) {
+		left: 7px;
+		top: 36px;
+		}
+
+		@include breakpoint(large) {
+		left: 10px;
+		}
+	}*/
+}
+/* IE Styles */
+.lt-ie9 #ci-list .letter li,
+.ie9 #ci-list .letter li {
+	@include breakpoint(small) {
+	display: block;
+	}
+}
+/* Back to top */
+.backToTop {
+	font-size: 14px;
+	padding-left: 10px;
+
+	&:before {
+	content: "↑";
+	margin-right: 4px;
+	}
+}
+.backToTop:hover:before {
+	text-decoration: none !important;
+}
+.letter h2 a {
+	color: #a4abae !important;
+}

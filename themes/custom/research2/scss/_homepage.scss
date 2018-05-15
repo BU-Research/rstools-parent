@@ -1,0 +1,512 @@
+/* Homepage template styles ------------------------------- */
+.home {
+	background: $white;
+
+	@include breakpoint(medium) {
+	background: $light-light-light-gray;
+	}
+
+	#page_wrapper {
+		padding: 0;
+		background: transparent;
+	}
+	#page_wrapper .container {
+		padding: 20px;
+
+		@include breakpoint(small) {
+		padding: 20px 0;
+		}
+
+		@include breakpoint(medium) {
+		margin-top: -20px;
+		margin-bottom: 20px;
+		padding: 20px;
+		}
+	}
+	#brand {
+		@include breakpoint(medium) {
+		padding-bottom: 39px;
+		}
+	}
+	#grants p a,
+	#did-you-know p a {
+		color: $black;
+	}
+	#did-you-know h2 a {
+		color: $medium-light-gray;
+	}
+	.button {
+		color: $white;
+	}
+	section {
+		position: relative;
+	}
+	article {
+		@extend %article-pad-styles;
+
+		@include breakpoint(medium) {
+		padding-bottom: 30px;
+		}
+	}
+	article p {
+		margin: 0;
+	}
+	article figure {
+		margin-bottom: 10px;
+	}
+	article:last-child {
+		padding-bottom: 0;
+	}
+}
+/* General section styles  ------------------------------- */
+#hp-top,
+#hp-bottom {
+	@extend %row-styles;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+
+	@include breakpoint(medium) {
+	padding-bottom: 20px;
+	}
+}
+#hp-bottom {
+	@include breakpoint(medium) {
+	min-height: 1020px;
+	border-top: 1px solid $light-light-gray;
+	}
+
+	@include breakpoint(large) {
+	min-height: 0;
+	}
+}
+#hp-bottom-left {
+	@extend .col-md-3;
+
+	@include breakpoint(small) {
+	float: left;
+	width: 33.33333333333333%;
+	padding: 0 0 0 20px;
+	}
+
+	@include breakpoint(medium) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 25%;
+	padding: 0 20px 20px 0;
+	}
+}
+#hp-bottom-left,
+#video-and-interactive,
+#q-and-a {
+	@include breakpoint(medium) {
+	padding-top: 20px;
+	}
+}
+/* Homepage Top styles  ------------------------------- */
+/* Homepage Feature */
+#featured {
+	@extend .col-md-6;
+	padding-bottom: 20px;
+
+	@include breakpoint(small) {
+	float: right;
+	width: 66.66666666666666%;
+	}
+
+	@include breakpoint(medium) {
+	position: absolute;
+	top: 0;
+	left: 25%;
+	float: none;
+	width: 50%;
+	height: 570px;
+	padding: 0 20px;
+	border-right: 1px solid $light-light-gray;
+	border-left: 1px solid $light-light-gray;
+	}
+
+	@include breakpoint(large) {
+	height: 700px;
+	}
+
+	h1 {
+		font-size: 30px;
+		color: $white;
+	}
+	h2 {
+		border-top: none;
+		padding: 0;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		margin: 0;
+		font-size: 12px;
+		line-height: 18px;
+
+		@include breakpoint(medium) {
+		left: 20px;
+		}
+	}
+	p {
+		color: $white;
+	}
+	h2 a {
+		@extend %meta-research-styles;
+		display: inline-block;
+	}
+	figure {
+		margin-bottom: 0;
+	}
+	img {
+		width: 100%;
+		height: auto;
+
+		@include breakpoint(small) {
+		max-height: 700px;
+		}
+	}
+	header {
+		@include rgba-color('background-color', rgba($black, 0.7), $medium-gray);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		padding: 20px;
+	}
+	.meta {
+		margin-top: 6px;
+	}
+	.meta-media-type {
+		font-size: 12px;
+		color: $light-gray;
+	}
+	.video {
+		padding: 2px 28px 2px 4px;
+		color: $white;
+		background-position: -142px -94px;
+		background-color: $aqua;
+	}
+	article {
+		@include breakpoint(medium) {
+		padding-bottom: 0;
+		}
+	}
+}
+/* Top Stories */
+#top-stories {
+	@extend .col-md-3;
+	padding-bottom: 20px;
+
+	@include breakpoint(small) {
+	float: left;
+	width: 33.33333333333333%;
+	padding: 0 20px 20px 0;
+	}
+
+	@include breakpoint(medium) {
+	width: 25%;
+	padding-bottom: 0;
+	}
+}
+/* More Stories */
+#more-stories {
+	@extend .col-md-6;
+	padding-bottom: 20px;
+
+	@include breakpoint(small) {
+	clear: both;
+	}
+
+	@include breakpoint(medium) {
+	clear: none;
+	margin-top: 570px;
+	margin-bottom: -99999px;
+	padding: 20px;
+	padding-bottom: 99999px;
+	border-right: 1px solid $light-light-gray;
+	border-left: 1px solid $light-light-gray;
+	}
+
+	@include breakpoint(large) {
+	margin-top: 700px;
+	}
+
+	article {
+		@extend %separated-styles;
+	}
+	a {
+		display: block;
+		min-height: 60px;
+		padding-left: 75px;
+	}
+	figure {
+		position: absolute;
+		top: 2px;
+		left: 0;
+		max-width: 60px;
+	}
+	img {
+		@include border-radius(50%);
+	}
+}
+/* Fast Facts Section */
+#fast-facts {
+	@extend .col-md-3;
+
+	@include breakpoint(small) {
+	float: left;
+	width: 66.66666666666666%;
+	}
+
+	@include breakpoint(medium) {
+	width: 25%;
+	padding-left: 20px;
+	}
+	h2 strong {
+		color: $black;
+	}
+	ul {
+		padding: 20px;
+		text-align: center;
+		list-style-type: none;
+		background-color: $aqua;
+	}
+	li {
+		@include rgba-color('border-color', rgba($white, 0.25), $aqua);
+		padding: 20px 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+		font-size: 15px;
+		font-weight: 700;
+		color: $light-aqua;
+
+		&:first-child {
+		padding-top: 0;
+		}
+
+		@include breakpoint(large) {
+		font-size: 15px;
+		}
+	}
+	strong {
+		color: $white;
+	}
+	em {
+		display: block;
+		font-size: 26px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 1.3;
+		text-transform: uppercase;
+	}
+	img {
+		display: block;
+		margin: 0 auto 10px;
+	}
+	a {
+		@extend %button-sm-styles;
+		@include rgba-color('background-color', rgba($black, 0.1), $aqua);
+
+		&:hover,
+		&:focus {
+		@include rgba-color('background-color', rgba($black, 0.2), $aqua);
+		}
+	}
+	li:last-child {
+		padding-bottom: 0;
+		border: none;
+	}
+	.fact2 strong {
+		font-size: 48px;
+		font-weight: 900;
+		line-height: 1;
+
+		@include breakpoint(large) {
+		font-size: 60px;
+		}
+	}
+	.fact3 strong {
+		font-size: 28px;
+		font-weight: 900;
+		line-height: 1.2;
+		text-transform: uppercase;
+	}
+}
+/* Grants Section */
+#grants {
+	@extend .col-md-3;
+	padding-bottom: 20px;
+
+	@include breakpoint(small) {
+	float: left;
+	width: 33.33333333333333%;
+	padding: 0 0 20px 20px;
+	}
+
+	@include breakpoint(medium) {
+	width: 25%;
+	}
+
+	h2 + p {
+		margin-bottom: 0;
+	}
+	h4 {
+		margin-bottom: 10px;
+		font-size: 18px;
+	}
+	p {
+		margin: 0 0 10px;
+		font-size: 14px;
+		color: $medium-light-gray;
+	}
+}
+/* Homepage bottom section -----------------------------*/
+/* Faculty Accolades Section */
+#accolades {
+	h2 {
+		position: relative;
+	}
+	h2 a {
+		color: $medium-light-gray;
+
+		&:hover .viewall,
+		&:focus .viewall {
+		@extend %viewall-hover-styles;
+		}
+	}
+	h2 a strong {
+		color: $black;
+	}
+	article {
+		@extend %separated-styles;
+	}
+	h1 {
+		@include breakpoint(medium) {
+		font-size: 15px;
+		}
+
+		@include breakpoint(large) {
+		font-size: 16px;
+		}
+	}
+}
+/* Did you know/Award winning faculty section */
+#did-you-know {
+	@include clearfix;
+	margin-top: 20px;
+	p {
+		margin-bottom: 10px;
+		clear: both;
+	}
+	h2 {
+		position: relative;
+	}
+	i {
+		display: block;
+		float: left;
+		padding: 0 10px 5px 0;
+		font-size: 72px;
+		line-height: 0.95;
+		font-weight: 900;
+		font-style: normal;
+		color: $black;
+		background: transparent url("images/trophy.png") -6px -7px no-repeat;
+		width: 78px;
+		height: 79px;
+		text-indent: -9999px;
+	}
+	.viewall {
+		position: absolute;
+		right: 0;
+		top: 12px;
+	}
+	a {
+		&:hover,
+		&:focus {
+		text-decoration: underline;
+		}
+	}
+	h2 a {
+		&:hover,
+		&:focus {
+			text-decoration: none !important;
+		}
+	}
+	a:hover .viewall,
+	a:focus .viewall {
+		@extend %viewall-hover-styles;
+	}
+	.award-winning a:hover,
+	.award-winning a:focus {
+		text-decoration: none;
+	}
+}
+.award-winning {
+	padding-top: 10px;
+	border-top: 1px solid $light-light-gray;
+}
+/* Video and Interactive section */
+#video-and-interactive {
+	@extend .col-md-6;
+	padding-bottom: 20px;
+
+	@include breakpoint(medium) {
+	margin-left: 232px;
+	margin-bottom: -99999px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 99999px;
+	border-left: 1px solid $light-light-gray;
+	border-right: 1px solid $light-light-gray;
+	}
+
+	@include breakpoint(large) {
+	margin-left: 282px;
+	}
+	article {
+		@extend %separated-styles;
+		min-height: 101px;
+		padding-left: 140px;
+	}
+	figure {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 120px;
+	}
+	article.featured {
+		padding-left: 0;
+	}
+	article.featured figure {
+		position: static;
+		width: auto;
+	}
+}
+/* Researcher Voices section */
+#q-and-a {
+	@extend .col-md-3;
+	padding-bottom: 20px;
+
+	@include breakpoint(small) {
+	float: left;
+	width: 66.66666666666666%;
+	}
+
+	@include breakpoint(medium) {
+	width: 25%;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	}
+}
+/* Load more stories */
+#hp-load-more {
+	padding-top: 20px;
+	border-top: 1px solid $light-light-gray;
+	text-align: center;
+	a {
+		@extend .button;
+		margin: 0 auto;
+	}
+}

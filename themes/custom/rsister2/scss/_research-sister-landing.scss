@@ -1,0 +1,112 @@
+.landing-contentIntro {
+	margin-top: 0;
+	width: 100%;
+	clear: both;
+
+	p {
+		font-size: 22px;
+		color: #6b6f71;
+		line-height: 1.4;
+	}
+}
+.landing-calloutWrap {
+	padding-top: 24px; // Accounts for "border" in before content below
+	clear: both;
+	overflow: hidden;
+	position: relative;
+
+	.home & {
+		padding-top: 0;
+	}
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 4px;
+		background: $research-sister-color-teal;
+
+		@include breakpoint(sm) {
+			left: 2%;
+		}
+
+		.home & {
+			display: none;
+		}
+	}
+
+	// TODO: use variable for margin amt
+	@include breakpoint(sm) {
+		margin-left: -2%;
+	}
+
+	a {
+		color: $research-sister-color-white;
+	}
+}
+.landing-calloutBox {
+	@extend %col-sm-margin-third;
+	display: block;
+	background: #02BAB9 center center no-repeat;
+	background-size: 100% auto;
+	background-size: cover;
+	text-align: center;
+	color: $research-sister-color-white;
+	position: relative;
+	line-height: 1.3;
+	padding-top: 75px;
+
+	@include breakpoint(sm) {
+		height: 0;
+		padding-top: 25.6%;
+		padding-bottom: 25.6%;
+		@include vertical-center-child('.landing-calloutCenter');
+
+		> .landing-calloutCenter { // Special snowflake iOS safari rules
+			position: absolute;
+			padding-right: 20px;
+			padding-left: 20px;
+			width: 100%;
+			left: 0;
+
+			.lt-ie9 & {
+				position: relative;
+			}
+		}
+	}
+	@include breakpoint(md) {
+		padding-top: 21.6%;
+		padding-bottom: 21.6%;
+	}
+
+	.home & {
+		@include breakpoint(sm) {
+			padding-top: 15.6%;
+			padding-bottom: 15.6%;
+		}
+	}
+}
+
+$learnmorewidth: 120px;
+
+.landing-calloutLink {
+	display: block;
+	width: $learnmorewidth;
+	background-color: $research-sister-color-teal;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -($learnmorewidth/2);
+	text-transform: lowercase;
+}
+.landing-calloutTitle {
+	color: inherit;
+	font-size: 34px;
+}
+.landing-calloutDescription {
+	margin-bottom: 0;
+}

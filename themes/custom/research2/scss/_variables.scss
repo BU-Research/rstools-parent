@@ -1,0 +1,55 @@
+/* START: variables
+----------------------------------------------------------------- */
+
+/* typography */
+
+$fontFamily-brand:'Whitney SSm A', 'Whitney SSm B', "Benton", sans-serif;
+$font-primary: 'Benton', sans-serif; /* colors: grayscale */
+$black:#111;
+$dark-dark-gray: #222323;
+$dark-gray: #38383c;
+$medium-dark-gray: #494c51;
+$medium-gray: #6b6f71;
+$medium-light-gray: #848d91;
+$light-gray: #a4abae;
+$light-light-gray: #dcdfdf;
+$light-light-light-gray: #f3f3f4;
+$light-light-light-light-gray: #f6f7f7;
+$white: #fff;
+$fontFamily-base: 'Benton', sans-serif;
+
+/* colors */
+$color-brand: #ce1126;
+$aqua:#00cdcc;
+$medium-light-aqua: #0fd5d4;
+$light-light-aqua: #eaf3f6;
+$light-aqua: #d1f5f6;
+$blue: #009cec;
+$light-blue: #39abed;
+$red: #cc0000;
+$yellow: #ffe900;
+
+/* grid */
+
+$XS: 500px;
+$S: 768px;
+$M: 992px;
+$L: 1200px;
+
+/* .container and #bottom-content-area div widths */
+$container_S: 728px;
+$container_M: 970px;
+$container_L: 1170px;
+
+/* Support @media queries by default (overridden in ie.scss) */
+$MQs: true !default;
+
+
+$color-widget-link: #00cdcc;
+$color-widget-link-hover: #00cdcc;
+$color-widget-contentnav: #a4abae;
+$color-widget-contentnav-hover: #000;
+$color-widget-contentnav-active: #000;
+$color-button-primary-bg: #00cdcc;
+$color-button-primary-text: #fff;
+$color-button-primary-bg-hover: #000;

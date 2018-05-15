@@ -1,0 +1,802 @@
+//////////////////////// Typography ////////////////////////
+@font-face {
+  font-family: "Benton";
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-2.eot?") format("embedded-opentype"),
+       url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-3.woff") format("woff"),
+       url("https://www.bu.edu/cdn/fonts/Benton-Sans-Light/1d3e1be9-e2ca-44c3-b674-7228a7c97407-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Benton";
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Black/bc06c909-a731-43ae-a772-ea42520c81b9-2.eot");
+  src: url("https://www.bu.edu/cdn/fonts/Benton-Sans-Black/bc06c909-a731-43ae-a772-ea42520c81b9-2.eot?") format("embedded-opentype"),
+       url("https://www.bu.edu/cdn/fonts/Benton-Sans-Black/bc06c909-a731-43ae-a772-ea42520c81b9-3.woff") format("woff"),
+       url("https://www.bu.edu/cdn/fonts/Benton-Sans-Black/bc06c909-a731-43ae-a772-ea42520c81b9-1.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 900;
+}
+
+.button {
+	@include border-radius(2em);
+	padding: .65em 1.5em .8em;
+	font-weight: bold;
+	margin-bottom: 2em;
+
+	&:hover,
+	&:active,
+	&:focus,
+	&:visited {
+		color: $color-button-text;
+	}
+
+	.widget &,
+	.footbar .widget & { // Responsive override
+		color: $color-button-text;
+
+		&:hover {
+			color: $color-button-text;
+		}
+	}
+}
+
+a {
+	text-decoration: none;
+}
+p:empty {
+	display: none; // Fix for Wordpress output
+}
+
+$com-info-chunks-margin: 25px;
+
+.bu_collapsible_container {
+	margin-bottom: $com-info-chunks-margin;
+
+	// Remove margins when stacked, one extra pixel to hide border
+	& + &,
+	& + p + &,
+	& + p + p + &,
+	& + p + p + p + & {
+		margin-top: -16px;
+	}
+}
+.bu_collapsible {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #eff3f3;
+
+	&:after {
+		background: $research-sister-color-teal;
+		color: $research-sister-color-white;
+		border: none;
+		content: "\002B";
+		font-family: "BU-Default-Icons";
+		padding: 9px 5px;
+		margin-top: -15px;
+		width: 20px;
+		height: 20px;
+		@include border-radius(50px);
+		line-height: 0;
+		font-size: 10px;
+		margin-left: -10px;
+
+		@include breakpoint(sm) {
+			font-size: 11px;
+			padding: 12px 6px;
+			width: 24px;
+			margin-top: -18px;
+		}
+	}
+}
+
+.bu_collapsible_open .bu_collapsible:after {
+	margin-top: -18px;
+	content: "\002D";
+}
+
+.bu_collapsible_section {
+	padding: 20px;
+	border-bottom: 3px solid #eff3f4;
+	background: #fafafa;
+	font-size: 16px;
+
+	ol {
+		padding: 0 0 0 10px;
+	}
+	ul {
+		padding: 0 0 0 30px;
+	}
+	ol:last-child,
+	ul:last-child {
+		margin: 0;
+	}
+}
+
+//////////////////////// Utilities ////////////////////////
+
+%tagStyles {
+	display: inline-block;
+	background-color: #ffe900;
+	color: $research-sister-color-black;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: 3px 10px;
+	font-size: 13px;
+}
+
+//////////////////////// Banners ////////////////////////
+
+$moveTitleUp: md;
+
+.bannerContainer-windowWidth {
+	height: 0;
+	padding: 0;
+	padding-bottom: 46%;
+	overflow: hidden;
+	position: relative;
+
+	@include breakpoint(xs) {
+		padding-bottom: 25.5%;
+	}
+
+	@include breakpoint(md) {
+		padding-bottom: 29.5%;
+	}
+
+	img {
+		height: auto;
+		width: 180%;
+		position: absolute;
+		max-width: none;
+		left: -40%;
+
+		@include breakpoint(xs) {
+			position: relative;
+			width: 100%;
+			left: auto;
+		}
+	}
+}
+.bannerContainer-pageWidth {
+	margin-bottom: 20px;
+}
+
+//////////////////////// Layout ////////////////////////
+
+.content {
+	.single-profile &,
+	.page-template-calendar & {
+		padding-top: 20px;
+
+		.bannerContainer-windowWidth {
+			margin-top: -20px;
+		}
+	}
+}
+.content-container {
+	position: relative;
+	background-color: #fff;
+	z-index: 2;
+	margin-bottom: 20px;
+
+	@include breakpoint($moveTitleUp) {
+		.bannerContainer-windowWidth + & {
+			margin-top: -100px;
+		}
+	}
+}
+article[role="main"] {
+
+	> h1:first-child {
+		// Yeah, I know. Gross. But there's no page title class and we can't risk this just being anywhere.
+		// When posts aren't found, an addition direct child h1 is output... so we have to check it's first too.
+		line-height: 1.2;
+
+		@include breakpoint($moveTitleUp) {
+			.bannerContainer-windowWidth + .content-container & { // I know, I know
+				text-transform: uppercase;
+				color: #fff;
+				position: absolute;
+				top: -100px;
+				left: -20px; // TODO: padding variable
+				text-shadow: 0 0 13px rgba(0,0,0,.16);
+				font-size: 50px;
+				margin-right: -33%; // Gives the title the full width of banner to work with instead of just article width
+			}
+		}
+	}
+}
+section {
+	margin-top: 20px;
+}
+
+//////////////////////// Widgets ////////////////////////
+
+.widget {
+	line-height: 1.2;
+
+	li,
+	li:first-child {
+		border: none;
+		padding: 0; // Zero out Responsive styles
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #dcdfdf;
+	}
+}
+.widgetTitle,
+.widget h3 {
+	font-size: 18px;
+
+	a {
+		color: $research-sister-color-lightgray;
+
+		em {
+			color: $research-sister-color-black;
+			font-style: normal;
+		}
+	}
+}
+
+// Creates a tag above any widget title or h3 in widget.
+// Built for Annual Symposium in the footer, allows client control of text.
+// Use anywhere you have control over HTML - just add the data-tag attribute with your desired text.
+
+$dataTagPadding: 40px;
+
+[data-tag] {
+	padding-top: $dataTagPadding;
+	position: relative;
+
+	&:before {
+		@extend %tagStyles;
+		content: attr(data-tag);
+		position: absolute;
+		top: 0;
+		left: auto;
+	}
+
+	&.widgetTitle {
+		padding-top: $dataTagPadding + 20px;
+
+		&:before {
+			top: 20px;
+		}
+	}
+}
+
+.widgetTitle {
+	padding: 15px 0 0 0;
+}
+
+// Content Nav widget
+
+.widget_bu_pages {
+	ul {
+		border-width: 1px 0 0 0;
+		padding-top: 0;
+		margin-top: 15px;
+	}
+	li {
+		padding: 0;
+		margin-bottom: 0;
+
+		&:first-child {
+			padding: 0;
+			margin-bottom: 0;
+		}
+		&:last-child {
+			border: none;
+		}
+
+		a {
+			font-weight: bold;
+			font-size: 18px;
+			color: #a4abae;
+			padding: 15px 0;
+		}
+
+		li:first-child {
+			padding-left: 20px;
+			border: none;
+		}
+	}
+	.level_1 {
+		+ ul {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+// Calendar widget
+
+.widget-bu-calendar {
+
+	// Shared styles for all calendar widgets
+	.date,
+	.event-time {
+		margin-bottom: 10px;
+	}
+	.date,
+	.full-date .date { // Responsive override
+		font-size: 18px;
+	}
+	.event-time {
+		display: block;
+		font-weight: bold;
+		color: #a4abae;
+	}
+
+	// Special styles for Graphic option
+
+	$dateWidth: 100px;
+
+	.graphic {
+		.date,
+		.day,
+		.month {
+			@include transition(all, 0.2s, ease-in-out, 0s);
+			position: absolute;
+			top: 0px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+		}
+		.date {
+			width: $dateWidth;
+			left: 0px;
+			display: block;
+			border: 1px solid #F3F3F4;
+			text-align: center;
+			color: #A4ABAE;
+		}
+		.day {
+			right: 0;
+			width: 55px;
+			font-size: 30px;
+			font-weight: 300;
+			color: #111;
+		}
+		.month {
+			left: 0px;
+			width: 45px;
+			font-size: 12px;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #A4ABAE;
+		}
+		a {
+			padding-left: $dateWidth +20px;
+
+			&:hover {
+				.date {
+					background-color: $research-sister-color-teal;
+					color: $research-sister-color-white;
+					border-color: $research-sister-color-teal;
+				}
+
+				.day,
+				.month {
+					color: inherit;
+				}
+			}
+		}
+	}
+}
+
+// List Child Pages
+
+.bu-list-child-pages {
+	li,
+	li:first-child {
+		padding: 0;
+		border: none;
+		margin-bottom: 15px;
+	}
+}
+
+// BU Slideshow
+
+.bu-slideshow-container {
+	padding-bottom: 75px;
+	margin-bottom: 0;
+}
+.bu-slideshow-navigation {
+	bottom: -50px;
+
+	&.nav-number {
+		a {
+			background-color: transparent !important; // BU Slideshow override
+			color: #a4abae !important; // BU Slideshow override
+			font-weight: bold;
+
+			&.active {
+				background-color: $research-sister-color-yellow !important; // BU Slideshow override
+				color: $research-sister-color-black !important;
+			}
+		}
+	}
+}
+
+// Fast Facts Slideshow Template styles
+
+$fastFactsColor: $research-sister-color-teal;
+
+.homepage-fastFacts {
+	.bu-slide-container {
+		background-color: $fastFactsColor;
+
+		@include breakpoint(sm) {
+			max-height: 300px;
+		}
+		@include breakpoint(lg) {
+			max-height: 265px;
+		}
+	}
+	h3 {
+		color: #e6feff;
+		text-align: center;
+		border-bottom: 1px solid #40d9d8;
+		padding-bottom: 20px;
+		font-size: $fontSize-base;
+
+		@include breakpoint(lg) {
+			margin-top: 12px;
+		}
+
+		em {
+			display: block;
+			font-weight: 900;
+			color: $research-sister-color-white;
+			font-style: normal;
+			font-size: $fontSize-larger;
+		}
+	}
+}
+.fast-facts-wrap { // Required for BU Slideshow JS to calculate height correctly
+	@extend %clearfix;
+	@include breakpoint(sm) {
+		height: 100%;
+	}
+}
+.fast-facts-image,
+.fast-facts-panel {
+	@extend %col-sm-half;
+}
+.fast-facts-image {
+	height: 100%;
+	overflow: hidden;
+
+	img {
+		display: none !important;
+		width: 100%;
+		height: auto;
+
+		@include breakpoint(xs) {
+			display: block !important; // BU Slideshow override
+		}
+		@include breakpoint(sm) {
+			height: 100%;
+			width: auto;
+			max-width: none !important;
+			max-height: 300px;
+		}
+	}
+}
+.fast-facts-panel {
+	padding: 20px;
+	.button {
+		background-color: #02bab9;
+		margin-bottom: 0;
+	}
+
+	$fastFactsCornerWidth: 40px;
+
+	&:before {
+		content: "";
+		display: block;
+		width: 0;
+		height: 0;
+		background-color: darken($fastFactsColor, 5%);
+		border-top: $fastFactsCornerWidth solid transparent;
+		border-left: $fastFactsCornerWidth solid lighten($fastFactsColor, 5%);
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+
+//////////////////////// Footbar ////////////////////////
+
+.footbar-container {
+	padding-top: 40px;
+
+	@include breakpoint(lg) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.lt-ie9 & {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.lt-ie9 .footbar-container .widget:first-child {
+	margin-left: 0;
+}
+.footbar {
+	color: #a4abae;
+
+	.widgetTitle,
+	.widget h3,
+	.widgetTitle a {
+		color: $research-sister-color-white;
+		border-color: #6b6f71;
+	}
+	.button {
+		@include border-radius(0);
+		background-color: #6b6f71;
+	}
+	.widget-bu-calendar .date {
+		color: $research-sister-color-white;
+	}
+	.widget-bu-calendar .graphic {
+		.date {
+			background-color: $research-sister-color-teal;
+			color: $research-sister-color-white;
+			border: none;
+		}
+		.day,
+		.month {
+			color: inherit;
+		}
+	}
+	.widget li {
+		border-color: #6b6f71;
+	}
+	#contentnavlist {
+		border-top: 5px solid #6b6f71;
+		margin-top: 0;
+
+		.first_item > a {
+			color: $research-sister-color-white;
+		}
+	}
+}
+
+//////////////////////// Site Footer ////////////////////////
+
+.siteFooter {
+	padding: 30px 0;
+	text-align: center;
+
+	@include breakpoint(sm) {
+		text-align: left;
+	}
+}
+.has-branding {
+	min-height: auto;
+
+	.site-footer-brand {
+		margin-bottom: 0;
+
+		@include breakpoint(sm) {
+			position: relative;
+			margin-top: 1px;
+		}
+		@include breakpoint(lg) {
+			margin-left: 20px;
+		}
+	}
+}
+.has-branding {
+	.site-footer-brand,
+	.site-footer-bumc {
+		display: inline-block;
+		position: static;
+		margin-right: 30px;
+
+		@include breakpoint(sm) {
+			display: block;
+			float: left;
+		}
+	}
+}
+.site-footer-brand + .site-footer-bumc {
+	@include breakpoint(sm) {
+		top: 0;
+	}
+}
+.site-footer-bumc + .siteFooter-info {
+	@include breakpoint(sm) {
+		padding-left: 300px;
+	}
+}
+.siteFooter-content {
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 75px;
+
+	@include breakpoint(sm) {
+		max-width: $container-SM;
+	}
+	@include breakpoint(md) {
+		max-width: $container-MD;
+		padding-bottom: 0;
+	}
+	@include breakpoint(lg) {
+		max-width: $container-LG;
+	}
+}
+.siteFooter-info {
+	color: $research-sister-color-white;
+	margin-bottom: 20px;
+
+	@include breakpoint(sm) {
+		width: 50%;
+		margin-bottom: 0;
+	}
+
+	address {
+		font-style: normal;
+		color: #888;
+	}
+	strong {
+		display: block;
+		color: $research-sister-color-white;
+	}
+}
+.siteFooter-links {
+
+	a[href^="tel:"] { // begins with tel: for phone number links
+		@extend %icon-phone;
+
+		&:before {
+			margin-right: .5em;
+		}
+	}
+	a[href^="mailto:"] { // begins with mailto: for email links
+		@extend %icon-envelope;
+
+		&:before {
+			margin-right: .5em;
+		}
+	}
+}
+.site-footer-brandContainer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+
+	@include breakpoint(sm) {
+		position: static;
+		width: auto;
+	}
+}
+.has-branding.has-info-links .siteFooter-info {
+	@include breakpoint(sm) {
+		width: 33%;
+	}
+	@include breakpoint(lg) {
+		width: 40%;
+	}
+}
+.has-branding.has-info-links .siteFooter-links {
+	@include breakpoint(sm) {
+		width: 30%;
+	}
+	@include breakpoint(md) {
+		width: 33%;
+	}
+}
+
+//////////////////////// News Templates ////////////////////////
+
+.page-template-news {
+
+	$newsThumbWidth: 150px;
+
+	.thumb {
+		max-width: $newsThumbWidth;
+		float: left;
+		margin-right: 20px;
+
+		+ h2,
+		~ .meta {
+			margin-left: $newsThumbWidth + 20px;
+		}
+	}
+	p {
+		clear: both; // Thumb should never intrude on this
+	}
+	.post {
+		@extend %clearfix;
+	}
+	.category,
+	.tag {
+		margin-left: .5em;
+
+		&:before {
+			display: none;
+		}
+		a {
+			@extend %tagStyles;
+		}
+	}
+}
+
+//////////////////////// Tables ////////////////////////
+
+table {
+  	//width:100%;
+ 	table-layout: fixed;
+
+ 	@include breakpoint(md) {
+ 		table-layout: fixed;
+ 	}
+ }
+
+.table-wrapper {
+	position: relative;
+ 	width: 100%;
+ 	margin: 0 auto;
+}
+
+.table-wrapper div {
+ 	overflow: scroll;
+}
+
+.slide-icon {
+ 	width: 150px;
+ 	height: 50px;
+ 	margin: 0 auto;
+ 	background: url(images/table_drag_icon.png) no-repeat center top;
+ 	text-indent: -500px;
+ 	overflow: hidden;
+
+	@include breakpoint(md) {
+ 		display:none;
+ 	}
+}
+
+
+//////////////////////// Print Button ////////////////////////
+
+.option-buttons {
+	float: right;
+	display: none;
+
+	@include breakpoint(sm) {
+		display: block;
+	}
+}
+
+.option-buttons a {
+	background: #fafafa;
+	border: 2px solid #f0f0f0;
+	color: #babfc3 !important;
+	margin-bottom: 10px;
+	padding: 12px 18px;
+	@include border-radius(5px);
+	text-transform: uppercase;
+	font-size: 15px;
+	font-family: "Benton",sans-serif;
+	font-weight: 700;
+
+	&:before {
+		content: "\2399";
+		font-family: "BU-Default-Icons";
+		margin-right: 10px;
+		color: #babfc3;
+	}
+
+	&:hover {
+		background: #fff;
+	}
+}
+
+////////// Edit link //////////////
+
+.edit-link {
+	top: 10px;
+	right: 150px;
+}

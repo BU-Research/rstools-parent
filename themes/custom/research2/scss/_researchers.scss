@@ -1,0 +1,520 @@
+/* START: researchers ----------------------------------------------------------------- */
+#featured-researchers {
+	@include clearfix;
+
+	.featured-list,
+	.profiles,
+	.experts {
+		@extend %row-styles;
+	}
+	.featured-list {
+		@include clearfix;
+		margin-bottom: 0;
+
+		@include breakpoint(small) {
+		margin: 0 -10px 20px;
+		}
+	}
+}
+/* Featured researcher blocks */
+.featured-list {
+	article {
+		@extend .col-sm-4;
+		position: relative;
+		margin-bottom: 20px;
+		padding-bottom: 100%;
+
+		@include breakpoint(small) {
+		margin-bottom: 0;
+		padding: 0 10px;
+		}
+	}
+	a {
+		position: absolute;
+		display: block;
+		overflow: hidden;
+		width: 100%;
+		height: 100%;
+		color: $black;
+
+		@include breakpoint(small) {
+		position: relative;
+		height: 216px;
+		}
+
+		@include breakpoint(medium) {
+		height: 297px;
+		}
+
+		@include breakpoint(large) {
+		height: 363px;
+		}
+	}
+	figure,
+	.meta {
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin: 0;
+	}
+	figure {
+		width: 100%;
+	}
+	h1 {
+		@include rgba-color('background-color', rgba($black, 0.4), $medium-gray);
+		@include transition(all, .2s, ease-in-out, 0s);
+		position: absolute;
+		left: 40px;
+		bottom: 0;
+		width: 100%;
+		margin: 0;
+		padding: 10px 14px;
+		font-size: 16px;
+		color: $white;
+
+		&:before {
+		@include rgba-color('background-color', rgba($black, 0.2), $medium-gray);
+		position: absolute;
+		left: -40px;
+		bottom: 0;
+		display: block;
+		width: 40px;
+		height: 40px;
+		background-image: url("images/bg-icons.png");
+		background-repeat: no-repeat;
+		background-position: -274px -388px;
+		content: "";
+		}
+	}
+	p {
+		display: none;
+	}
+	a:hover h1,
+	a:focus h1 {
+		background-color: $black;
+	}
+}
+/* Listing */
+#profiles {
+	h1 {
+		@extend %section-title-styles;
+		color: $black;
+	}
+	.profile {
+		@extend .col-md-12;
+		@extend %separated-styles;
+		min-height: 120px;
+		padding: 110px 0 20px;
+
+		@include breakpoint(small) {
+		padding: 0 243px 20px 120px;
+		min-height: 120px;
+		}
+
+		@include breakpoint(medium) {
+		padding: 0 317px 20px 120px;
+		width: 100%;
+
+		}
+
+		@include breakpoint(large) {
+		padding: 0 383px 20px 120px;
+		}
+	}
+	.profile figure {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100px;
+
+		@include breakpoint(small) {
+		width: 100px;
+		}
+	}
+	.profile img {
+		@include border-radius(50%);
+	}
+	.profile a img {
+		&:hover,
+		&:focus {
+		opacity: 0.9;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+		}
+	}
+	.profile ul {
+		margin: 0;
+
+		@include breakpoint(small) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 223px;
+		}
+
+		@include breakpoint(medium) {
+		width: 297px;
+		}
+
+		@include breakpoint(large) {
+		width: 363px;
+		}
+	}
+	.profile li {
+		margin: 0;
+		padding-bottom: 5px;
+		list-style-type: none;
+	}
+	.profile li a {
+		color: $blue;
+
+		&:hover,
+		&:focus {
+		text-decoration: underline;
+		}
+	}
+	.profile h2 {
+		margin: 0 0 5px;
+		font-size: 18px;
+		color: $black;
+	}
+	.profile h2 a {
+		color: $black;
+
+		&:hover,
+		&:focus {
+		text-decoration: underline;
+		}
+	}
+	.profile h3 {
+		margin: 0 0 10px;
+		font-size: 16px;
+		color: $light-gray;
+	}
+	.profile p {
+		font-size: 16px;
+		color: $medium-gray;
+
+		@include breakpoint(small) {
+		margin: 0;
+		}
+	}
+}
+.lt-ie9 #profiles .profile {
+	padding: 0 383px 20px 120px;
+}
+.profile-listing {
+	.basic figure {
+		height: auto;
+	}
+	.basic {
+		border-top: none;
+	}
+	.basic li {
+		min-height: inherit;
+		margin: auto;
+		padding: 0;
+		border-bottom: none;
+	}
+}
+.post-type-archive-profile article figure {
+	min-height: 100%;
+}
+/* Profile Listing Page */
+.profiles-archive {
+	border-right: 0 !important;
+	padding-right: 0 !important;
+
+	a .profile-name {
+		color: #111 !important;
+		font-weight: bold;
+		text-decoration: none;
+	}
+	a .profile-title {
+		color: #a4abae;
+		font-weight: bold;
+	}
+	article figure {
+		min-height: auto !important;
+
+		@include breakpoint(large) {
+		min-height: auto !important;
+		}
+	}
+	.basic li {
+		padding: 14px 0;
+		border-bottom: 1px solid #dcdfdf;
+	}
+	.has-title a:hover {
+		text-decoration: none !important;
+	}
+	.has-title a:hover .profile-name {
+		text-decoration: underline !important;
+	}
+	.profile {
+	border-right: 0 !important;
+	padding-right: 0 !important;
+	}
+}
+.archive article[role=main] {
+	height: auto;
+}
+
+/* Faculty Experts ad */
+#experts {
+	position: relative;
+	margin-top: 20px;
+	border-top: 3px solid $aqua;
+	background: $light-light-light-gray;
+
+	a {
+		display: block;
+		padding: 30px 20px 200px;
+
+		@include breakpoint(small) {
+		padding: 40px 33.333333332% 40px 30px;
+		}
+
+		&:hover,
+		&:focus {
+		text-decoration:none;
+		}
+	}
+	a p {
+		display: block;
+		color: $light-gray;
+	}
+	h2 {
+		margin: 0 0 20px;
+		font-size: 24px;
+		font-weight: 300;
+		line-height: 1.2;
+		color: $black;
+	}
+	h2 strong {
+		display: block;
+		font-size: 40px;
+		font-weight: 300;
+		color: $aqua;
+	}
+	p {
+		display: none;
+	}
+	a:hover .button,
+	a:focus .button {
+		background-color: $white;
+		color: $aqua;
+	}
+	figure {
+		@include vertical-center-child;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		height: 200px;
+		margin: 0;
+		background: transparent url("images/bg-experts.jpg") no-repeat 50% 50%;
+		background-size: cover;
+
+		@include breakpoint(small) {
+		top: 0;
+		right: 0;
+		bottom: auto;
+		left: auto;
+		width: 33.333333332%;
+		height: 100%;
+		}
+	}
+	figure .button {
+		@include transition(all, .2s, ease-in-out, 0s);
+		position: absolute;
+		left: 50%;
+		margin-left: -62px;
+		border: 2px solid $white;
+		color: $white;
+		background-color: transparent;
+	}
+
+}
+.lt-ie9 #experts figure .button {
+	top: 100px;
+}
+/* Researcher profile pages ------------------------------------------------------ */
+.single-profile {
+	#page_wrapper .container {
+		background: transparent;
+	}
+	.title {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 0 24px 0;
+		font-size: 15px;
+		color: $light-gray;
+		font-weight: 400;
+
+		@include breakpoint(small) {
+			width: 80%;
+			font-size: 18px;
+		}
+	}
+	.profile-thumb figure {
+	  -webkit-border-radius: 50%;
+	  -moz-border-radius: 50%;
+	  -ms-border-radius: 50%;
+	  border-radius: 50%;
+	  width: 120px;
+	  height: 120px;
+	  overflow: hidden;
+	  position: absolute;
+	  top: 0;
+	  left: 50%;
+	  margin-left: -60px;
+	}
+	figure {
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  -ms-border-radius: 0;
+	  border-radius: 0;
+	  max-width: 100%;
+	  width: auto;
+	  height: auto;
+	  overflow: hidden;
+	  position: relative;
+	  margin-left: 0;
+	  left: auto;
+	  top: auto;
+	}
+	figure img {
+		width: auto;
+	}
+	.name {
+		padding-top: 145px;
+	}
+	.profile-info {
+		width: 100%;
+		display: block;
+		clear: both;
+		border: none;
+		background: #fff;
+	}
+	.profile-info .title {
+		display: none;
+	}
+	.profile {
+		border-right: none;
+		padding: 0;
+		width: 90% !important;
+
+		@include breakpoint (medium) {
+			width: 60% !important;
+		}
+
+		@include breakpoint (large) {
+			width: 50% !important;
+		}
+	}
+	.website {
+		text-transform: uppercase;
+		font-family: "Benton", Helvetica, sans-serif;
+		font-size: 14px !important;
+		font-weight: 700;
+	}
+	.website:after {
+		padding-left: 6px;
+		content: "\21AA";
+		font-family: "BU-Default-Icons";
+		font-style: normal;
+		font-size: 10px;
+		font-weight: 100;
+		color: $aqua;
+	}
+}
+.archive .paging-navigation a,
+.single a.archiveLink {
+	background: $aqua;
+}
+/* Recent Research Styles in Researcher profiles */
+#linked-posts {
+	width: 100%;
+	clear: both;
+
+	.meta {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		-ms-border-radius: 0;
+		border-radius: 0;
+		background-color: transparent;
+		border: none;
+		border-width: 0;
+		font-size: 12px;
+		padding: 0;
+		margin-bottom: 0;
+	}
+	.row {
+		margin: 0 -10px;
+
+		@include breakpoint(medium) {
+		margin: 0;
+		}
+	}
+	p {
+		margin: 0;
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	h2 {
+		text-align: left;
+		padding: 10px 0 20px;
+		@extend %card-title-styles;
+	}
+	article {
+		position: relative;
+	}
+	.meta-research-area {
+		position: absolute;
+		top: 0;
+		left: 10px;
+
+		@include breakpoint(medium) {
+		left: 118px;
+		max-width: 172px;
+		}
+
+		@include breakpoint(large) {
+		max-width: 232px;
+		}
+	}
+	h1 {
+		font-size: 16px;
+		text-align: left;
+		padding-top: 0;
+	}
+	.col-sm-4 {
+		padding: 0 10px 20px;
+
+		@include breakpoint(medium) {
+		float: none;
+		width: 100%;
+		margin-bottom: 20px;
+		padding: 0;
+		}
+	}
+	.col-sm-4 a {
+		@include breakpoint(medium) {
+		display: block;
+		min-height: 100px;
+		padding: 30px 0 0 118px;
+		}
+	}
+	.col-sm-4 figure {
+		@include breakpoint(medium) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		max-width: 108px;
+		}
+	}
+}

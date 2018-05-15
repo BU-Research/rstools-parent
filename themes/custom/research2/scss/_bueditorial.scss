@@ -1,0 +1,24 @@
+/* BU editorial plugin styles/overrides  ------------------------------- */
+
+body .editorial-audioPlayer-style-box blockquote.editorial-audioPlayer-quotetext em {
+	background: $light-light-light-gray;
+}
+
+@media only screen and (min-width : 580px) {
+	body .editorial-audioPlayer-style-box blockquote.editorial-audioPlayer-quotetext em {
+		background: none;
+	}
+
+	body .editorial-audioPlayer-style-boxPhoto blockquote.editorial-audioPlayer-quotetext em:before {
+		background: $light-light-light-gray;
+	}
+}
+
+.bu-editorial-template-custom .comment-author,
+.bu-editorial-template-custom  .comment-metadata {
+	padding: 0 !important;
+}
+
+.bu-editorial-template-custom  .comments-title {
+	font-size: 20px;
+}

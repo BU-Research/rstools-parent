@@ -1,0 +1,146 @@
+/* Helper Style for navigation pagination  ------------------------------- */
+%pagenumber-styles {
+	@include border-radius(4px);
+	@include transition(all, .2s, ease-in-out, 0s);
+	padding: 11px 12px;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 40px;
+}
+/* Archive template styles  ------------------------------- */
+.archive {
+	@include clearfix;
+
+	.row {
+		@include breakpoint(small) {
+		margin: 0 -10px;
+		}
+	}
+	/* Archive article styles */
+	article {
+		@extend .col-md-3;
+		padding-bottom: 30px;
+
+		@include breakpoint(small) {
+		float: left;
+		width: 33.33333333333333%;
+		height: 380px;
+		padding: 0 10px 30px;
+		}
+
+		@include breakpoint(medium) {
+		width: 25%;
+		}
+	}
+	article a {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		margin: 0;
+		font-size: 14px;
+		color: $medium-light-gray;
+	}
+	a:hover h2,
+	a:focus h2 {
+		text-decoration: underline;
+	}
+	a:hover img,
+	a:focus img {
+		opacity: 0.9;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	}
+	article figure {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 10px;
+
+		@include breakpoint(small) {
+		min-height: 149px;
+		}
+
+		@include breakpoint(medium) {
+		min-height: 145px;
+		}
+
+		@include breakpoint(large) {
+		min-height: 179px;
+		}
+	}
+	article img {
+		display: block;
+
+		@include breakpoint(small) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		}
+	}
+	article h2 {
+		@extend %card-title-styles;
+	}
+	.meta-research-area {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+	}
+	.meta-media-type {
+		margin-right: 10px;
+	}
+	/* Archive Pagination styles */
+	aside.navigation {
+		position: relative;
+		clear: both;
+	}
+	.paging-navigation {
+		clear: none;
+		margin-top: 0;
+		padding-top: 20px;
+	}
+	.paging-navigation a {
+		@include border-radius(4px);
+		font-size: 14px;
+	}
+	.pagenumber-nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		display: none;
+		width: 100%;
+		height: 40px;
+		margin: 0 auto;
+		padding: 0 96px;
+		padding-top: 20px;
+		text-align: center;
+
+		@include breakpoint(small) {
+		display: block;
+		}
+	}
+	.pagenumber-nav a {
+		@extend %pagenumber-styles;
+		color: $medium-gray;
+		background-color: $light-light-gray;
+
+		&:hover,
+		&:active,
+		&:focus {
+		color: $white;
+		background-color: $black;
+		}
+	}
+	.pagenumber-nav .current {
+		@extend %pagenumber-styles;
+		color: $white;
+		background-color: $medium-gray;
+	}
+	.pagenumber-nav .dots {
+		padding: 10px 0;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 14px;
+		color: $light-gray;
+	}
+}

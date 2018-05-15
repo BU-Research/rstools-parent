@@ -1,0 +1,221 @@
+//////////////////////// Profiles/Faculty Directory Template ////////////////////////
+
+.page-template-profiles {
+	@extend %removeTemplateNarrow;
+		article[role="main"] {
+			width: 100%;
+		}
+}
+#profile-filter {
+	list-style-type: none;
+	padding: 0;
+
+	li {
+		$arrowcolor: $research-sister-color-yellow;
+		$arrowsize: 8px;
+
+		position: relative;
+		display: inline-block;
+		color: #a4abae;
+		font-weight: bold;
+		padding: 4px 15px;
+		margin: 5px;
+		margin-bottom: 5px + $arrowsize;
+		font-size: 16px;
+		text-transform: lowercase;
+		background-color: #f3f3f4;
+
+		&:hover {
+			background-color: #e7e7e8;
+			color: #889093;
+			cursor: pointer;
+		}
+		&.active {
+			background-color: $arrowcolor;
+			color: $research-sister-color-black;
+
+			&:after {
+				content: "";
+				display: block;
+				width: 0;
+				height: 0;
+				border-left: $arrowsize solid transparent;
+				border-right: $arrowsize solid transparent;
+				border-top: $arrowsize solid $arrowcolor;
+				position: absolute;
+				bottom: -$arrowsize;
+				left: 50%;
+				margin-left: -($arrowsize);
+			}
+		}
+	}
+}
+
+// Alphabetical grouping styles
+
+.directory-groupWrapper {
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+.directory-groupList {
+	padding: 0;
+	list-style-type: none;
+}
+.directory-groupTitle {
+	text-transform: uppercase;
+	border-bottom: 1px solid #dcdfdf;
+}
+.directory-groupItem {
+	@extend %clearfix;
+	margin-bottom: .5em;
+
+	&.hidden {
+		display: none;
+	}
+}
+// Individual profile listing styles
+
+.directory-groupItem {
+	height: 55px; // Required for vertical centering
+	@include vertical-center-child('.directory-itemLink');
+}
+.directory-itemLink {
+	display: block;
+}
+.directory-itemThumb {
+	float: left;
+	width: 55px;
+	height: 55px;
+	overflow: hidden;
+	@include border-radius(0);
+	margin-right: 15px;
+}
+.directory-itemName {
+	display: inline;
+	font-size: inherit;
+	color: $research-sister-color-teal;
+}
+.directory-itemTitle {
+	display: inline;
+	font-size: inherit;
+	font-weight: normal;
+	color: #6b6f71;
+	margin-left: .5em;
+}
+
+//////////////////////// Single Profile Template ////////////////////////
+.single-profile {
+	@extend %removeTemplateNarrow;
+
+	article[role="main"] { // This override sponsored by Responsive
+		.singleProfile-name {
+			text-transform: none;
+			padding-top: 10px;
+			margin-bottom: 20px;
+			color: inherit;
+			font-size: 40px;
+			margin-bottom: 10px;
+
+			@include breakpoint(xs) {
+				text-align: left;
+			}
+		}
+		.singleProfile-title {
+			color: inherit;
+			font-size: 24px;
+			font-weight: normal;
+
+			@include breakpoint(xs) {
+				text-align: left;
+			}
+		}
+	}
+	.profile-info {
+		@extend %clearfix;
+		width: 100%;
+		float: none;
+		margin-left: 0;
+		background-color: $research-sister-color-medgray;
+		color: $research-sister-color-white;
+		border-left: none;
+
+		dl {
+			margin-bottom: 0;
+		}
+		dt {
+			@extend %tagStyles;
+			margin-bottom: 5px;
+			font-size: 12px;
+			padding-top: 2px;
+			padding-bottom: 2px;
+		}
+		dd {
+			margin-left: 0;
+			margin-bottom: 10px;
+		}
+		a {
+			color: inherit;
+
+			&[href^="mailto:"] { // Starts with selector for email links
+				@extend %icon-envelope;
+
+				&:before {
+					margin-right: .5em;
+					position: relative;
+					top: -1px;
+				}
+			}
+		}
+	}
+
+	$profileThumbsize: 240px;
+
+	.profile-thumb {
+		width: 100px;
+		height: 100px;
+		//height: $profileThumbsize;
+		overflow: hidden;
+		margin: 0 auto;
+		@include border-radius(50%);
+
+		@include breakpoint(xs) {
+			float: left;
+			width: 45%;
+			height: auto;
+			@include border-radius(0);
+			margin: 0;
+			margin-right: 20px;
+		}
+		@include breakpoint(sm) {
+			width: $profileThumbsize;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		~ * { // all siblings of thumb
+			margin-left: 0;
+
+			@include breakpoint(xs) {
+				margin-left: 50%;
+			}
+			@include breakpoint(sm) {
+				margin-left: $profileThumbsize + 20px;
+			}
+		}
+	}
+	.profile-tax {
+		dt {
+			@extend %tagStyles;
+			margin-bottom: 5px;
+		}
+		dd {
+			margin-left: 0;
+		}
+	}
+}

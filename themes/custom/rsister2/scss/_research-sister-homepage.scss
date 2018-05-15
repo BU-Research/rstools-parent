@@ -1,0 +1,260 @@
+.home {
+	h2 {
+		font-size: 18px;
+		color: #a4abae;
+		text-align: left;
+
+		em {
+			color: $research-sister-color-black;
+			font-style: normal;
+		}
+	}
+}
+.homepage[role="main"] { // Specificity needed to override Responsive
+	width: 100%;
+	float: none;
+}
+.homepage-intro {
+	margin-top: 0;
+	width: 100%;
+	clear: both;
+
+	p {
+		font-size: 22px;
+		color: #6b6f71;
+		line-height: 1.4;
+	}
+	.button {
+		//margin-bottom: 0;
+	}
+}
+.homepage-intro,
+.homepage[role="main"],
+.content-container {
+	position: static;
+
+	@include breakpoint(md) {
+		position: relative;
+	}
+}
+.homepage-pageTitle {
+	text-transform: uppercase;
+	line-height: 1.2;
+	color: #fff;
+	height: 0;
+	padding-top: 28%;
+	padding-bottom: 28%;
+
+	// TODO: only if banner container width
+	//@include breakpoint($moveTitleUp) {
+		position: absolute;
+		top: 0;
+
+		@include breakpoint(xs) {
+			padding-top: 14%;
+			padding-bottom: 14%;
+		}
+		@include breakpoint(sm) {
+			left: auto;
+			margin-left: -20px;
+		}
+		@include breakpoint($moveTitleUp) {
+			top: -155px;
+			padding: 0;
+		}
+
+		h1, h2 {
+			color: inherit;
+			line-height: inherit;
+			margin: 0;
+			text-shadow: 0 0 13px rgba(0,0,0,.16);
+		}
+		h1 {
+			font-size: 42px;
+			font-size: 12vw;
+			margin-top: -17%;
+
+			@include breakpoint(xs) {
+				font-size: 34px;
+				font-size: 6.5vw;
+				margin-top: -9%;
+			}
+			@include breakpoint($moveTitleUp) {
+				font-size: 60px;
+				margin-top: 0;
+			}
+		}
+		h2 {
+			font-size: 13px;
+			font-size: 3.3vw;
+
+			@include breakpoint($moveTitleUp) {
+				font-size: 24px;
+			}
+		}
+	//}
+	a {
+		color: inherit;
+	}
+	em {
+		color: #111111;
+		font-style: normal;
+	}
+}
+.homepage-newsEvents {
+	@extend %equal-height-parent;
+}
+.homepage-newsFeed {
+	@extend %col-md-margin-three-quarter;
+	@extend %equal-height-child;
+	position: relative;
+	border-top: 4px solid $research-sister-color-teal;
+	margin: 0;
+	text-align: center; // For .button
+	padding: 0;
+	padding-top: 20px;
+
+	@include breakpoint(md) {
+		margin-right: #{$grid-margin-width}#{"%"};
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		width: 1px;
+		height: 100%;
+		background: #dcdfdf;
+		position: absolute;
+		right: -24px;
+		top: -5px;
+	}
+
+	.news_list {
+		padding: 0;
+		text-align: left;
+	}
+	li {
+		@extend %clearfix;
+		list-style-type: none;
+		position: relative;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #dcdfdf;
+	}
+	.categories,
+	.tags {
+		position: static;
+		text-indent: -150%; // To hide comma delimiters between tags set to display:none
+
+		+ .thumbnail {
+			margin-top: -48.8px;
+		}
+		+ .thumbnail:empty {
+			margin-top: 0;
+		}
+
+		a:first-child {
+			@extend %tagStyles;
+			position: absolute;
+			top: 0;
+			left: 0;
+			text-indent: 0; // To get the stuff we want in the design back
+			z-index: 2;
+		}
+		a:not(:first-child) {
+			display: none;
+		}
+	}
+	.thumbnail {
+		z-index: 1;
+		width: 100%;
+
+		@include breakpoint(xs) {
+			float: left;
+			width: 215px;
+			height: auto;
+			padding-top: 0;
+		}
+
+		img {
+			width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+
+			@include breakpoint(xs) {
+				width: auto;
+				margin-bottom: 0;
+			}
+		}
+
+		+ .news_post_title {
+			@include breakpoint(xs) {
+				margin-top: -53px; // When thumb is visible, compensate for .category and .tag margin-bottom
+			}
+		}
+		+ .news_post_title,
+		~ .excerpt {
+			@include breakpoint(xs) {
+				margin-left: 215px + 20px; // Thumb width plus margin
+			}
+		}
+		&:empty {
+			+ .news_post_title,
+			~ .excerpt {
+				margin-left: 0;
+			}
+			+ .news_post_title {
+				@include breakpoint(xs) {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+	.news_post_title {
+		a {
+			color: inherit;
+		}
+	}
+	.excerpt {
+		font-size: 15px;
+	}
+}
+.homepage-upcomingEvents {
+	@extend %col-md-margin-quarter;
+	@extend %equal-height-child;
+	border-top: 4px solid $research-sister-color-teal;
+	padding: 0;
+	padding-top: 20px;
+	margin: 0;
+
+	@include breakpoint(md) {
+		padding-right: 20px;
+		margin-left: 2%;
+	}
+
+	.sidebar {
+		width: 100%;
+		float: none;
+		padding-left: 0;
+		margin: 0;
+	}
+	.widget:last-child {
+		margin-bottom: 0;
+	}
+	.widgetnav {
+		text-align: center; // For .button
+
+		li {
+			text-align: left;
+		}
+	}
+	.button {
+		margin-bottom: .65em;
+	}
+}
+.homepage-fastFacts {
+	border-top: 4px solid $research-sister-color-teal;
+	padding-top: 20px;
+	width: 100%;
+	clear: both;
+}
