@@ -16,7 +16,10 @@
         "drupal/easy_install": "^10.1",
         "drupal/context": "^4.0@beta",
         "drupal/link_attributes": "^1.2",
-        "drupal/menu_block": "^1.5"
+        "drupal/menu_block": "^1.5",
+        "drupal/sendgrid_integration": "^1.1",
+        "drupal/swiftmailer": "^1.0@beta",
+        "drupal/mailsystem": "^4.1"
     },
     "replace": {
         "drupal/core": "^8.5"
