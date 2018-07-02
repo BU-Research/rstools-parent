@@ -5,24 +5,7 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "composer/installers": "^1.0.24",
-        "wikimedia/composer-merge-plugin": "^1.4",
-        "drush/drush": "^9.2",
-        "drupal/bootstrap_layouts": "^5.1",
-        "drupal/paragraphs": "^1.2",
-        "drupal/ds": "^3.1",
-        "drupal/profile": "^1.0@RC",
-        "drupal/menu_export": "^1.2",
-        "drupal/easy_install": "^10.1",
-        "drupal/context": "^4.0@beta",
-        "drupal/link_attributes": "^1.2",
-        "drupal/menu_block": "^1.5",
-        "drupal/sendgrid_integration": "^1.1",
-        "drupal/swiftmailer": "^1.0@beta",
-        "drupal/mailsystem": "^4.1",
-        "drupal/simplenews": "^1.0@alpha",
-        "drupal/pathauto": "^1.2",
-        "drupal/webform": "^5.0@RC",
-        "drupal/mimemail": "^1.0@alpha"
+        "wikimedia/composer-merge-plugin": "^1.4"
     },
     "replace": {
         "drupal/core": "^8.5"
