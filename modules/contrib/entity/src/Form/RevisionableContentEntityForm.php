@@ -43,10 +43,9 @@ class RevisionableContentEntityForm extends ContentEntityForm {
   }
 
   /**
-   * Gets the bundle entity of the current entity.
+   * Returns the bundle entity of the entity, or NULL if there is none.
    *
    * @return \Drupal\Core\Entity\EntityInterface|null
-   *   The bundle entity, or NULL if there is none.
    */
   protected function getBundleEntity() {
     if ($bundle_key = $this->entity->getEntityType()->getKey('bundle')) {

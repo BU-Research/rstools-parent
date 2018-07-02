@@ -56,11 +56,9 @@ class EntityPermissionProviderBase implements EntityPermissionProviderInterface,
       'title' => $this->t('Administer @type', ['@type' => $plural_label]),
       'restrict access' => TRUE,
     ];
-    if ($entity_type->hasLinkTemplate('collection')) {
-      $permissions["access {$entity_type_id} overview"] = [
-        'title' => $this->t('Access the @type overview page', ['@type' => $plural_label]),
-      ];
-    }
+    $permissions["access {$entity_type_id} overview"] = [
+      'title' => $this->t('Access the @type overview page', ['@type' => $plural_label]),
+    ];
     if ($has_owner && $entity_type->entityClassImplements(EntityPublishedInterface::class)) {
       $permissions["view own unpublished {$entity_type_id}"] = [
         'title' => $this->t('View own unpublished @type', [
@@ -84,7 +82,7 @@ class EntityPermissionProviderBase implements EntityPermissionProviderInterface,
    * Adds the provider and converts the titles to strings to allow sorting.
    *
    * @param array $permissions
-   *   The array of permissions.
+   *   The array of permissions
    * @param \Drupal\Core\Entity\EntityTypeInterface $entity_type
    *   The entity type.
    *
